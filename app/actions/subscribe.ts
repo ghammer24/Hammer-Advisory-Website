@@ -5,13 +5,11 @@ interface SubscribeResult {
   message: string
 }
 
-export async function subscribeToInsights(
-  prevState: SubscribeResult | null,
-  formData: FormData
-): Promise<SubscribeResult> {
+export async function subscribeToInsights(formData: FormData): Promise<SubscribeResult> {
   const email = formData.get("email") as string
   const firstName = formData.get("firstName") as string | null
 
+  // Validate email
   if (!email) {
     return {
       success: false,
@@ -27,19 +25,23 @@ export async function subscribeToInsights(
     }
   }
 
+  // Check for Zapier webhook URL
   const webhookUrl = process.env.ZAPIER_WEBHOOK_URL
+
   if (!webhookUrl) {
     console.error("[Newsletter] ZAPIER_WEBHOOK_URL is not configured")
     return {
       success: false,
-      message: "Newsletter signup is temporarily unavailable.",
+      message: "Newsletter signup is temporarily unavailable. Please try again later.",
     }
   }
 
   try {
     const response = await fetch(webhookUrl, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         email,
         firstName: firstName || "",
@@ -49,12 +51,22 @@ export async function subscribeToInsights(
     })
 
     if (!response.ok) {
-      return { success: false, message: "Something went wrong. Please try again." }
+      console.error("[Newsletter] Zapier webhook failed:", response.status)
+      return {
+        success: false,
+        message: "Something went wrong. Please try again.",
+      }
     }
 
-    return { success: true, message: "Thank you — you're now aligned." }
+    return {
+      success: true,
+      message: "Thank you — you're now aligned.",
+    }
   } catch (error) {
-    console.error("[Newsletter] Error:", error)
-    return { success: false, message: "Something went wrong. Please try again." }
+    console.error("[Newsletter] Error sending to Zapier:", error)
+    return {
+      success: false,
+      message: "Something went wrong. Please try again.",
+    }
   }
 }

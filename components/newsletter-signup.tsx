@@ -1,4 +1,3 @@
-// components/newsletter-signup.tsx
 "use client"
 
 import { useActionState } from "react"
