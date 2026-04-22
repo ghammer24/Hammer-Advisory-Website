@@ -1,0 +1,207 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Not A Moment Sooner - Premium Executive Theme */
+  /* Deep Navy: #0A1428, Gold: #D4B48C, Sage: #8A9A7B, Cream: #FAF8F5 */
+  --background: #FAF8F5;
+  --foreground: #0A1428;
+  --card: #FFFFFF;
+  --card-foreground: #0A1428;
+  --popover: #FFFFFF;
+  --popover-foreground: #0A1428;
+  --primary: #D4B48C;
+  --primary-foreground: #0A1428;
+  --secondary: #0A1428;
+  --secondary-foreground: #FAF8F5;
+  --muted: #F5F3F0;
+  --muted-foreground: #5A6578;
+  --accent: #8A9A7B;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #E8E4DF;
+  --input: #E8E4DF;
+  --ring: #D4B48C;
+  --chart-1: #D4B48C;
+  --chart-2: #8A9A7B;
+  --chart-3: #0A1428;
+  --chart-4: #C4A67C;
+  --chart-5: #7A8A6B;
+  --radius: 0.5rem;
+  --sidebar: #FAF8F5;
+  --sidebar-foreground: #0A1428;
+  --sidebar-primary: #D4B48C;
+  --sidebar-primary-foreground: #0A1428;
+  --sidebar-accent: #F5F3F0;
+  --sidebar-accent-foreground: #0A1428;
+  --sidebar-border: #E8E4DF;
+  --sidebar-ring: #D4B48C;
+  
+  /* Custom brand colors */
+  --navy: #0A1428;
+  --gold: #D4B48C;
+  --sage: #8A9A7B;
+  --cream: #FAF8F5;
+}
+
+.dark {
+  --background: #0A1428;
+  --foreground: #FAF8F5;
+  --card: #0F1D35;
+  --card-foreground: #FAF8F5;
+  --popover: #0F1D35;
+  --popover-foreground: #FAF8F5;
+  --primary: #D4B48C;
+  --primary-foreground: #0A1428;
+  --secondary: #1A2A42;
+  --secondary-foreground: #FAF8F5;
+  --muted: #1A2A42;
+  --muted-foreground: #A0A8B5;
+  --accent: #8A9A7B;
+  --accent-foreground: #0A1428;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: #1A2A42;
+  --input: #1A2A42;
+  --ring: #D4B48C;
+  --chart-1: #D4B48C;
+  --chart-2: #8A9A7B;
+  --chart-3: #FAF8F5;
+  --chart-4: #C4A67C;
+  --chart-5: #7A8A6B;
+  --sidebar: #0F1D35;
+  --sidebar-foreground: #FAF8F5;
+  --sidebar-primary: #D4B48C;
+  --sidebar-primary-foreground: #0A1428;
+  --sidebar-accent: #1A2A42;
+  --sidebar-accent-foreground: #FAF8F5;
+  --sidebar-border: #1A2A42;
+  --sidebar-ring: #D4B48C;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+  --font-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  
+  /* Brand colors */
+  --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-sage: var(--sage);
+  --color-cream: var(--cream);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Blog prose styles - refined, elegant typography */
+.prose {
+  @apply text-navy/75 text-base leading-[1.75];
+}
+
+.prose p {
+  @apply mb-5;
+}
+
+.prose h2 {
+  @apply font-serif text-lg md:text-xl text-navy mt-10 mb-4 tracking-tight;
+}
+
+.prose h3 {
+  @apply font-serif text-base md:text-lg text-navy mt-8 mb-3 tracking-tight;
+}
+
+.prose strong {
+  @apply text-navy font-medium;
+}
+
+.prose ul,
+.prose ol {
+  @apply mb-5 pl-5;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+/* Elegant blockquote styling */
+.prose blockquote {
+  @apply border-l-2 border-gold/60 pl-6 py-8 my-12 mx-0 md:mx-4 bg-transparent;
+}
+
+.prose blockquote p {
+  @apply font-serif text-lg md:text-xl text-navy/80 italic mb-0 leading-relaxed;
+}
+
+.prose blockquote cite {
+  @apply text-gold/80 text-sm not-italic block mt-3;
+}
+
+.prose a {
+  @apply text-gold hover:text-gold/80 underline underline-offset-4 transition-colors;
+}
+
+.prose figure {
+  @apply my-10 p-6 bg-cream rounded-lg;
+}
+
+.prose figcaption {
+  @apply text-center text-navy/40 text-xs mt-4;
+}
+
+.prose-lg {
+  @apply text-base;
+}
