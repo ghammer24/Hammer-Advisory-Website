@@ -54,7 +54,7 @@ export function PhilosophySection() {
 
             <div className="space-y-4 text-cream/70 text-sm leading-relaxed">
               <p>
-                Your current state shapes everything: your decisions, how you show up, and the relationships you lead.
+                Your current state shapes everything: your decisions, how you show up, the relationships you lead, and the opportunities you notice.
               </p>
 
               <p>
