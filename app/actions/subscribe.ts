@@ -28,6 +28,7 @@ export async function subscribeToInsights(
   }
 
   const webhookUrl = process.env.ZAPIER_WEBHOOK_URL
+
   if (!webhookUrl) {
     console.error("[Newsletter] ZAPIER_WEBHOOK_URL is not configured")
     return {
