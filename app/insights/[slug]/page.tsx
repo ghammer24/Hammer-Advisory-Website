@@ -1,3 +1,4 @@
+import { NewsletterSignup } from "@/components/newsletter-signup"
 import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
