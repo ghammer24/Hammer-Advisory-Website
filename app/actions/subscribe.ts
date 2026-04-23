@@ -13,21 +13,26 @@ export async function subscribeToInsights(
   const firstName = formData.get("firstName") as string | null
 
   if (!email) {
-    return { success: false, message: "Please enter your email address." }
+    return {
+      success: false,
+      message: "Please enter your email address.",
+    }
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   if (!emailRegex.test(email)) {
-    return { success: false, message: "Please enter a valid email address." }
+    return {
+      success: false,
+      message: "Please enter a valid email address.",
+    }
   }
 
   const webhookUrl = process.env.ZAPIER_WEBHOOK_URL
-
   if (!webhookUrl) {
-    console.error("ZAPIER_WEBHOOK_URL is not configured")
-    return { 
-      success: false, 
-      message: "Newsletter signup is temporarily unavailable. Please try again later." 
+    console.error("[Newsletter] ZAPIER_WEBHOOK_URL is not configured")
+    return {
+      success: false,
+      message: "Newsletter signup is temporarily unavailable. Please try again later.",
     }
   }
 
@@ -44,17 +49,16 @@ export async function subscribeToInsights(
     })
 
     if (!response.ok) {
-      console.error("Zapier error:", response.status)
+      console.error("[Newsletter] Zapier error:", response.status)
       return { success: false, message: "Something went wrong. Please try again." }
     }
 
     return { success: true, message: "Thank you — you're now aligned." }
   } catch (error) {
-    console.error("Subscription error:", error)
+    console.error("[Newsletter] Error:", error)
     return { 
       success: false, 
       message: "Something went wrong. Please try again later." 
     }
   }
-}
 }
