@@ -44,7 +44,7 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-cream/40">
             <p>&copy; {new Date().getFullYear()} Hammer Advisory, a DBA of Not A Moment Sooner, LLC. All rights reserved.</p>
             <span className="hidden sm:inline">|</span>
-            <p>Pasadena, California</p>
+            <p>Pasadena, California & Virtually Worldwide</p>
           </div>
 
           {/* Legal links */}

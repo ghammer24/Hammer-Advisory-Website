@@ -58,7 +58,7 @@ export function ContactSection() {
           <div className="max-w-lg mx-auto mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
             <div className="flex items-center gap-2 text-navy/50 text-sm">
               <MapPin className="w-4 h-4 text-gold" />
-              <span>Pasadena, California</span>
+              <span>Pasadena, California & Virtually Worldwide</span>
             </div>
             <span className="hidden sm:inline text-navy/30">|</span>
             <p className="text-navy/50 text-sm">
