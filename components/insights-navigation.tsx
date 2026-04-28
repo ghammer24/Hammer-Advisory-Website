@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { LogoIcon } from "@/components/logo-icon"
+import { HourglassIcon } from "@/components/hourglass-icon"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
@@ -46,10 +46,9 @@ export function InsightsNavigation() {
             href="/" 
             className="flex items-center gap-3 transition-all duration-300 shrink-0"
           >
-            <LogoIcon 
-              className="w-9 h-11 transition-all duration-300"
-              variant="light"
-              priority
+            <HourglassIcon 
+              className="w-9 h-11 transition-colors duration-300"
+              variant="cream"
             />
             <span className="font-serif text-lg tracking-wide transition-colors duration-300 hidden sm:inline text-cream">
               Hammer Advisory

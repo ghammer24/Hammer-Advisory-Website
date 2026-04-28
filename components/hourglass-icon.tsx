@@ -5,102 +5,103 @@ interface HourglassIconProps {
 
 export function HourglassIcon({ className, variant = "current" }: HourglassIconProps) {
   const colors = {
-    gold: { outline: "#D4B48C", sand: "#D4B48C" },
-    navy: { outline: "#0A1428", sand: "#D4B48C" },
-    cream: { outline: "#FAF8F5", sand: "#FAF8F5" },
-    current: { outline: "currentColor", sand: "currentColor" },
+    gold: "#C9A86C",
+    navy: "#0A1428",
+    cream: "#FAF8F5",
+    current: "currentColor",
   }
 
-  const { outline, sand } = colors[variant]
+  const color = colors[variant]
 
   return (
     <svg
-      viewBox="0 0 100 120"
+      viewBox="0 0 100 130"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      aria-label="Hammer Advisory"
     >
-      {/* Hourglass outline - smooth curved shape */}
+      {/* Hourglass outline - elegant curved shape matching the logo */}
       <path
-        d="M20 15
-           C20 15 20 18 20 20
-           Q20 35 35 50
-           Q40 55 40 60
-           Q40 65 35 70
-           Q20 85 20 100
-           C20 102 20 105 20 105
-           L80 105
-           C80 105 80 102 80 100
-           Q80 85 65 70
-           Q60 65 60 60
-           Q60 55 65 50
-           Q80 35 80 20
-           C80 18 80 15 80 15
-           L20 15 Z"
-        stroke={outline}
-        strokeWidth="2"
+        d="M18 20
+           L18 25
+           C18 35 25 45 35 55
+           C42 62 45 65 45 70
+           C45 75 42 78 35 85
+           C25 95 18 105 18 115
+           L18 120
+           L82 120
+           L82 115
+           C82 105 75 95 65 85
+           C58 78 55 75 55 70
+           C55 65 58 62 65 55
+           C75 45 82 35 82 25
+           L82 20
+           L18 20 Z"
+        stroke={color}
+        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
       />
       
-      {/* Top sand - wavy line with partial fill in upper chamber */}
+      {/* Sand in top chamber - wavy surface */}
       <path
-        d="M28 22
-           L72 22
-           L72 28
-           Q72 38 62 48
-           Q55 55 50 58
-           Q45 55 38 48
-           Q28 38 28 28
-           L28 22 Z"
-        fill={sand}
-        opacity="0.25"
+        d="M26 30
+           Q35 34 50 30
+           Q65 26 74 30
+           L74 35
+           C74 42 68 50 60 58
+           C54 64 50 67 50 70
+           C50 67 46 64 40 58
+           C32 50 26 42 26 35
+           L26 30 Z"
+        fill={color}
+        opacity="0.3"
       />
       
-      {/* Wavy sand line in top chamber */}
+      {/* Sand wavy line */}
       <path
-        d="M32 32
-           Q38 28 50 32
-           Q62 36 68 32"
-        stroke={sand}
+        d="M28 32 Q40 38 50 32 Q60 26 72 32"
+        stroke={color}
         strokeWidth="2"
         fill="none"
-        opacity="0.6"
+        opacity="0.5"
       />
       
-      {/* Bottom sand - fully filled */}
+      {/* Sand in bottom chamber - filled */}
       <path
-        d="M28 98
-           L72 98
-           L72 92
-           Q72 82 62 72
-           Q55 65 50 62
-           Q45 65 38 72
-           Q28 82 28 92
-           L28 98 Z"
-        fill={sand}
+        d="M26 110
+           L74 110
+           L74 105
+           C74 98 68 90 60 82
+           C54 76 50 73 50 70
+           C50 73 46 76 40 82
+           C32 90 26 98 26 105
+           L26 110 Z"
+        fill={color}
         opacity="0.85"
       />
       
-      {/* Arrow emerging from top right - diagonal with arrowhead */}
+      {/* Arrow emerging from top right corner */}
       <line
-        x1="68"
+        x1="72"
         y1="28"
-        x2="88"
+        x2="92"
         y2="8"
-        stroke={outline}
-        strokeWidth="2"
+        stroke={color}
+        strokeWidth="2.5"
         strokeLinecap="round"
       />
+      
       {/* Arrowhead */}
-      <path
-        d="M88 8 L82 8 L88 14 Z"
-        fill="none"
-        stroke={outline}
-        strokeWidth="2"
+      <polyline
+        points="85,8 92,8 92,15"
+        stroke={color}
+        strokeWidth="2.5"
         strokeLinecap="round"
         strokeLinejoin="round"
+        fill="none"
       />
     </svg>
   )

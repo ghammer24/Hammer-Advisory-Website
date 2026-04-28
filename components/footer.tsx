@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { LogoIcon } from "@/components/logo-icon"
+import { HourglassIcon } from "@/components/hourglass-icon"
 
 export function Footer() {
   return (
@@ -10,7 +10,7 @@ export function Footer() {
           {/* Logo */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <LogoIcon className="w-10 h-12" variant="light" />
+              <HourglassIcon className="w-10 h-12" variant="gold" />
               <span className="font-serif text-xl text-cream tracking-wide">
                 Hammer Advisory
               </span>
