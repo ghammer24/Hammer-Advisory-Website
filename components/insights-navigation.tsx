@@ -47,8 +47,9 @@ export function InsightsNavigation() {
             className="flex items-center gap-3 transition-all duration-300 shrink-0"
           >
             <HourglassIcon 
-              className="w-9 h-11 transition-colors duration-300"
+              className="w-9 h-11 transition-all duration-300"
               variant="cream"
+              priority
             />
             <span className="font-serif text-lg tracking-wide transition-colors duration-300 hidden sm:inline text-cream">
               Hammer Advisory
