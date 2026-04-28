@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { HourglassIcon } from "@/components/hourglass-icon"
+import { LogoIcon } from "@/components/logo-icon"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
@@ -42,9 +42,10 @@ export function Navigation() {
             href="/" 
             className="flex items-center gap-3 transition-all duration-300 shrink-0"
           >
-            <HourglassIcon 
-              className="w-9 h-11 transition-colors duration-300"
-              variant={isScrolled ? "navy" : "cream"}
+            <LogoIcon 
+              className="w-9 h-11 transition-all duration-300"
+              variant={isScrolled ? "default" : "light"}
+              priority
             />
             <span className={cn(
               "font-serif text-lg tracking-wide transition-colors duration-300 hidden sm:inline",
