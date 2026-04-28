@@ -43,9 +43,8 @@ export function Navigation() {
             className="flex items-center gap-3 transition-all duration-300 shrink-0"
           >
             <HourglassIcon 
-              className="w-9 h-11 transition-all duration-300"
-              variant={isScrolled ? "gold" : "cream"}
-              priority
+              className="w-9 h-11 transition-colors duration-300"
+              variant={isScrolled ? "navy" : "cream"}
             />
             <span className={cn(
               "font-serif text-lg tracking-wide transition-colors duration-300 hidden sm:inline",
