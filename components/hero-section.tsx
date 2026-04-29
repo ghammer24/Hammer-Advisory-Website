@@ -53,20 +53,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-4"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-6"
           >
-            Strategic Alignment for Executives & Leaders
+            Strategic Alignment for High Achievers Ready for the Next Threshold
           </motion.h1>
-
-          {/* Founder name */}
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-cream text-lg md:text-xl font-medium tracking-wide mb-6"
-          >
-            Gabriella Hammer <span className="text-cream/60">|</span> Founder of Hammer Advisory
-          </motion.p>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -74,7 +64,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-xl mb-10"
           >
-            Strategic alignment for high-achievers who have built a lot and know the next level requires something different.
+            You have built significant success. Yet you sense there is still an internal gap between where you are and what you are truly capable of. We close that gap by training the mind to lead your emotions and body so regulation becomes consistent, ownership becomes automatic, and high performance compounds even when it is uncomfortable.
           </motion.p>
 
           {/* CTA Button */}
