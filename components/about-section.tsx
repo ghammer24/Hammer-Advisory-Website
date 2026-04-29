@@ -53,19 +53,19 @@ export function AboutSection() {
 
             <div className="space-y-5 text-navy/70 text-sm lg:text-base leading-relaxed">
               <p>
-                I&apos;m Gabriella Hammer, founder of Hammer Advisory.
+                I am Gabriella Hammer, founder of Hammer Advisory.
               </p>
               
               <p>
-                I work with executives, leaders, and high performers who are operating at the top of their field and still feel like something is off. Not broken. Not failing. Just... not all the way there.
+                I work with executives, leaders, and high performers who are operating at the top of their field and still feel like something is off. You are not broken. You are not failing. You have simply reached a threshold where the next level requires something different, an internal architecture that supports sustained excellence.
               </p>
 
               <p>
-                My background is unusual for this work. As a PMH-NP with a critical care background, I understand the human system at a level most advisors don&apos;t. I know what regulation actually looks like, what dysregulation costs you, and how to build the internal architecture that makes sustained high performance possible, not just occasional.
+                With a background as a PMH NP and critical care experience, I bring a precise understanding of the human system: what true regulation looks like, what dysregulation costs, and how to build the internal consistency that most advisors overlook.
               </p>
               
               <p>
-                That&apos;s what this is. Advisory work at the intersection of human performance and identity.
+                At Hammer Advisory, this is strategic alignment at the intersection of human performance and identity. We help you train the mind to direct feelings rather than follow them, take full ownership of outcomes, and close internal gaps through disciplined practice. The result is performance that becomes more automatic and instinctual over time.
               </p>
             </div>
           </motion.div>

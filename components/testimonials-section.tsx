@@ -6,15 +6,15 @@ import { motion, useInView } from "framer-motion"
 
 const testimonials = [
   {
-    quote: "I was spread so thin I genuinely thought I had hit my ceiling. I was doing everything right on paper and nothing was working. Gabriella helped me see that the problem wasn't my business.",
-    role: "Top 5% Financial Advisor",
+    quote: "I was spread so thin I genuinely thought I had hit my ceiling. I was doing everything right on paper and nothing was working. Gabriella helped me see that the problem was not my business.",
+    role: "Top 5 percent Financial Advisor",
   },
   {
-    quote: "I'm graduating, I have the capital, I have the vision. Gabriella is part of my team. That's not changing. Let's rip it.",
-    role: "Founder, Pre-Series A Startup",
+    quote: "I am graduating, I have the capital, I have the vision. Gabriella is part of my team. That is not changing. Let us rip it.",
+    role: "Founder, Pre Series A Startup",
   },
   {
-    quote: "I knew how to perform. That was never the issue. But there's a version of you that competes and a version of you that leads. Gabriella helped me find the one that could do both.",
+    quote: "I knew how to perform. That was never the issue. But there is a version of you that competes and a version of you that leads. Gabriella helped me find the one that could do both.",
     role: "Professional Athlete",
   },
 ]

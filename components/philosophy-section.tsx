@@ -8,17 +8,17 @@ const principles = [
   {
     icon: Heart,
     title: "State Regulation",
-    description: "Every decision is downstream of your internal state. We help you regulate your state so you can show up with steadier presence and clearer thinking.",
+    description: "Every decision is downstream of your internal state. We train the mind to remain regulated even when emotions, fatigue, or pressure arise so you can show up with steadier presence and clearer thinking, especially when it matters most.",
   },
   {
     icon: Target,
-    title: "Recursive Self-Awareness",
-    description: "From that regulated state, you make decisions, receive real-world feedback, and reflect. This recursive self-awareness reveals patterns and blind spots as they happen.",
+    title: "Recursive Self Awareness",
+    description: "From a regulated state, you act, receive real world feedback, and reflect with full ownership and zero external blame. This recursive process reveals patterns and blind spots in real time and accelerates gap closure.",
   },
   {
     icon: Zap,
     title: "Lasting Transformation",
-    description: "Through repeated cycles of regulation, decision-making, feedback, and reflection, the changes compound. You build a new, more consistent identity that performs at a higher level without constant effort.",
+    description: "Through repeated cycles of regulation, decisive action, ownership, and reflection, change compounds. You build a more consistent identity where high performance becomes instinctual rather than effortful, no longer dependent on motivation or perfect conditions.",
   },
 ]
 
@@ -54,19 +54,15 @@ export function PhilosophySection() {
 
             <div className="space-y-4 text-cream/70 text-sm leading-relaxed">
               <p>
-                Your current state shapes everything: your decisions, how you show up, the relationships you lead, and the opportunities you notice.
+                Your internal state shapes every decision, every interaction, and every opportunity you can see. Most high achievers already know what to do. The real constraint is almost always internal.
               </p>
 
               <p>
-                Most high achievers already know what to do. The real constraint is usually internal.
-              </p>
-
-              <p>
-                At Hammer Advisory, we help you close those internal gaps through consistent state regulation and recursive self-awareness. You regulate your state, act from it, receive feedback, and reflect. Each cycle compounds.
+                We close those internal gaps through three integrated pillars.
               </p>
               
               <p className="text-cream/90 font-medium">
-                The goal is simple. Build the internal foundation so you can eventually self-guide with no gaps in identity or performance.
+                The goal is simple: develop the internal foundation so you can self guide with fewer gaps, even in challenging moments.
               </p>
             </div>
 
