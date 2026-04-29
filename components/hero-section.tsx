@@ -55,17 +55,19 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-6"
           >
-            Strategic Alignment for High Achievers Ready for the Next Threshold
+            Strategic Alignment for High Achievers
           </motion.h1>
 
-          <motion.p 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-xl mb-10"
+            className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-xl mb-10 space-y-1"
           >
-            You have built significant success. Yet you sense there is still an internal gap between where you are and what you are truly capable of. We close that gap by training the mind to lead your emotions and body so regulation becomes consistent, ownership becomes automatic, and high performance compounds even when it is uncomfortable.
-          </motion.p>
+            <p>You&apos;ve built significant success.</p>
+            <p>Yet something still feels off.</p>
+            <p className="text-cream font-medium">We close the internal gap.</p>
+          </motion.div>
 
           {/* CTA Button */}
           <motion.div 
