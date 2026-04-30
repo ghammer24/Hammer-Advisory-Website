@@ -143,7 +143,9 @@ export default function ServicesPage() {
               </div>
               <div className="mt-8">
                 <Link 
-                  href="#book"
+                  href="https://calendly.com/gabriellahammer/discovery-call"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-navy text-cream px-6 py-3 font-medium tracking-wide hover:bg-navy/90 transition-colors rounded-sm"
                 >
                   Apply via Discovery Call
