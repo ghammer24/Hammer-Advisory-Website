@@ -61,7 +61,7 @@ export function AboutSection() {
               </p>
 
               <p>
-                With a background as a PMH NP and critical care experience, I bring a precise understanding of the human system: what true regulation looks like, what dysregulation costs, and how to build the internal consistency that most advisors overlook.
+                With a background as a PMH-NP and critical care experience, I bring a precise understanding of the human system: what true regulation looks like, what dysregulation costs, and how to build the internal consistency that most advisors overlook.
               </p>
               
               <p>
