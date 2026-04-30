@@ -120,11 +120,11 @@ export default function ServicesPage() {
                   <ul className="space-y-3 text-navy/70 text-sm">
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                      <span>Regular 1:1 advisory sessions</span>
+                      <span>1:1 advisory sessions</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                      <span>State regulation training and practice</span>
+                      <span>Regulation and performance mastery</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
@@ -133,10 +133,6 @@ export default function ServicesPage() {
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
                       <span>Real-time support between sessions</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                      <span>Personalized alignment framework</span>
                     </li>
                   </ul>
                 </div>
