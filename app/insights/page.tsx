@@ -173,7 +173,9 @@ export default function InsightsPage() {
             If something here resonated, that&apos;s worth a conversation.
           </p>
           <Link 
-            href="/#contact"
+            href="https://calendly.com/gabriellahammer/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gold text-navy px-8 py-4 font-medium tracking-wide hover:bg-gold/90 transition-colors rounded"
           >
             Book a Discovery Call

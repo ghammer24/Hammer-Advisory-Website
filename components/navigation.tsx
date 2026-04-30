@@ -74,7 +74,7 @@ export function Navigation() {
               size="sm"
               className="bg-gold text-navy hover:bg-gold/90 font-medium tracking-wide rounded-sm px-6"
             >
-              <Link href="#contact">Let&apos;s Talk</Link>
+              <Link href="https://calendly.com/gabriellahammer/discovery-call" target="_blank" rel="noopener noreferrer">Let&apos;s Talk</Link>
             </Button>
           </div>
 
@@ -109,7 +109,7 @@ export function Navigation() {
                 asChild
                 className="bg-gold text-navy hover:bg-gold/90 font-medium tracking-wide mt-2"
               >
-                <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="https://calendly.com/gabriellahammer/discovery-call" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                   Let&apos;s Talk
                 </Link>
               </Button>
