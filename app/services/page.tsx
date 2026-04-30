@@ -191,8 +191,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Book Section with Calendly */}
-      <section id="book" className="py-16 lg:py-24 bg-cream">
+      {/* Book Section with Zapier Form */}
+      <section id="book" className="py-16 lg:py-24 bg-muted">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-xl mx-auto text-center mb-8">
             <h2 className="font-serif text-2xl md:text-3xl text-navy tracking-tight mb-4">
@@ -203,12 +203,14 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Calendly Widget */}
-          <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-sm border border-navy/5 overflow-hidden">
-            <div 
-              className="calendly-inline-widget" 
-              data-url="https://calendly.com/gabriellahammer/discovery-call"
-              style={{ minWidth: "320px", height: "700px" }}
+          {/* Zapier Form */}
+          <div className="max-w-lg mx-auto">
+            <iframe 
+              src="https://interfaces.zapier.com/embed/page/cmo39egjj0005c77wyex458ou?noBackground=false"
+              className="w-full rounded-sm"
+              style={{ height: "580px" }}
+              frameBorder="0"
+              title="Book a Discovery Conversation"
             />
           </div>
 
@@ -218,7 +220,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Calendly Script */}
+      {/* Calendly Script for Discovery Call section */}
       <Script 
         src="https://assets.calendly.com/assets/external/widget.js" 
         strategy="lazyOnload"
