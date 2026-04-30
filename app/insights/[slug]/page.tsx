@@ -345,7 +345,9 @@ export default async function BlogPostPage({ params }: PageProps) {
               Book a discovery call to explore whether this work is right for you.
             </p>
             <Link 
-              href="/#contact"
+              href="https://calendly.com/gabriellahammer/discovery-call"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gold text-navy px-6 py-3 text-sm font-medium tracking-wide hover:bg-gold/90 transition-colors rounded-sm"
             >
               Book a Discovery Call

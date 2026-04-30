@@ -1,15 +1,21 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { HourglassIcon } from "@/components/hourglass-icon"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { href: "#about", label: "Who I Am" },
-  { href: "#philosophy", label: "Philosophy" },
+  { 
+    href: "#about", 
+    label: "Who I Am",
+    dropdown: [
+      { href: "#philosophy", label: "Philosophy" }
+    ]
+  },
+  { href: "/services", label: "Services" },
   { href: "#testimonials", label: "Client Experiences" },
   { href: "/insights", label: "Insights" },
 ]
@@ -17,6 +23,8 @@ const navLinks = [
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +32,16 @@ export function Navigation() {
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [])
 
   return (
@@ -54,26 +72,60 @@ export function Navigation() {
             </span>
           </Link>
 
-          {/* Desktop Navigation - use lg breakpoint for proper spacing */}
-          <div className="hidden lg:flex items-center gap-10">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-10" ref={dropdownRef}>
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "text-sm tracking-wide transition-colors duration-300 hover:text-gold whitespace-nowrap",
-                  isScrolled ? "text-navy/80" : "text-cream/90"
-                )}
-              >
-                {link.label}
-              </Link>
+              link.dropdown ? (
+                <div key={link.href} className="relative">
+                  <button
+                    onClick={() => setOpenDropdown(openDropdown === link.href ? null : link.href)}
+                    className={cn(
+                      "flex items-center gap-1 text-sm tracking-wide transition-colors duration-300 hover:text-gold whitespace-nowrap",
+                      isScrolled ? "text-navy/80" : "text-cream/90"
+                    )}
+                  >
+                    <Link href={link.href} onClick={(e) => { e.stopPropagation(); setOpenDropdown(null); }}>
+                      {link.label}
+                    </Link>
+                    <ChevronDown className={cn(
+                      "w-3.5 h-3.5 transition-transform duration-200",
+                      openDropdown === link.href && "rotate-180"
+                    )} />
+                  </button>
+                  {openDropdown === link.href && (
+                    <div className="absolute top-full left-0 mt-2 py-2 bg-cream/98 backdrop-blur-md rounded-sm shadow-lg border border-navy/5 min-w-[140px]">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setOpenDropdown(null)}
+                          className="block px-4 py-2 text-sm text-navy/80 hover:text-gold hover:bg-navy/5 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "text-sm tracking-wide transition-colors duration-300 hover:text-gold whitespace-nowrap",
+                    isScrolled ? "text-navy/80" : "text-cream/90"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <Button
               asChild
               size="sm"
               className="bg-gold text-navy hover:bg-gold/90 font-medium tracking-wide rounded-sm px-6"
             >
-              <Link href="#contact">Let&apos;s Talk</Link>
+              <Link href="https://calendly.com/gabriellahammer/discovery-call" target="_blank" rel="noopener noreferrer">Let&apos;s Talk</Link>
             </Button>
           </div>
 
@@ -95,20 +147,35 @@ export function Navigation() {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-cream/98 backdrop-blur-lg border-t border-border shadow-lg">
             <div className="container mx-auto px-6 py-6 flex flex-col gap-3">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-navy/80 hover:text-gold text-lg tracking-wide py-2"
-                >
-                  {link.label}
-                </Link>
+                <div key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-navy/80 hover:text-gold text-lg tracking-wide py-2 block"
+                  >
+                    {link.label}
+                  </Link>
+                  {link.dropdown && (
+                    <div className="pl-4 mt-1">
+                      {link.dropdown.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="text-navy/60 hover:text-gold text-base tracking-wide py-1.5 block"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <Button
                 asChild
                 className="bg-gold text-navy hover:bg-gold/90 font-medium tracking-wide mt-2"
               >
-                <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="https://calendly.com/gabriellahammer/discovery-call" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                   Let&apos;s Talk
                 </Link>
               </Button>

@@ -81,7 +81,7 @@ export function HeroSection() {
               size="lg"
               className="bg-gold text-navy hover:bg-gold/90 font-medium px-10 py-6 text-base tracking-wide transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-gold/20"
             >
-              <Link href="#contact">
+              <Link href="https://calendly.com/gabriellahammer/discovery-call" target="_blank" rel="noopener noreferrer">
                 Let&apos;s Talk
               </Link>
             </Button>
