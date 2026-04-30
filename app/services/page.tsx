@@ -225,7 +225,7 @@ export default function ServicesPage() {
       {/* Calendly Script for Discovery Call section */}
       <Script 
         src="https://assets.calendly.com/assets/external/widget.js" 
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
 
       <Footer />
