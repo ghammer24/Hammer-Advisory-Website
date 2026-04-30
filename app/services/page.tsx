@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Script from "next/script"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ArrowRight, Calendar, Users, Mic } from "lucide-react"
@@ -76,24 +77,13 @@ export default function ServicesPage() {
                 </Link>
               </div>
 
-              {/* Calendly Embed Placeholder */}
-              <div className="bg-white rounded-lg shadow-sm border border-navy/5 p-8 lg:p-10">
-                <div className="text-center">
-                  <p className="text-navy/50 text-sm mb-6">
-                    Select a time that works for you
-                  </p>
-                  {/* Calendly inline widget */}
-                  <div 
-                    className="calendly-inline-widget" 
-                    data-url="https://calendly.com/gabriellahammer/discovery"
-                    style={{ minWidth: "280px", height: "400px" }}
-                  />
-                  <script 
-                    type="text/javascript" 
-                    src="https://assets.calendly.com/assets/external/widget.js" 
-                    async 
-                  />
-                </div>
+              {/* Calendly Embed */}
+              <div className="bg-white rounded-lg shadow-sm border border-navy/5 overflow-hidden">
+                <div 
+                  className="calendly-inline-widget" 
+                  data-url="https://calendly.com/gabriellahammer/discovery-call"
+                  style={{ minWidth: "320px", height: "700px" }}
+                />
               </div>
             </div>
 
@@ -201,8 +191,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Book Section with Zapier Form */}
-      <section id="book" className="py-16 lg:py-24 bg-muted">
+      {/* Book Section with Calendly */}
+      <section id="book" className="py-16 lg:py-24 bg-cream">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-xl mx-auto text-center mb-8">
             <h2 className="font-serif text-2xl md:text-3xl text-navy tracking-tight mb-4">
@@ -213,14 +203,12 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Zapier Form */}
-          <div className="max-w-lg mx-auto">
-            <iframe 
-              src="https://interfaces.zapier.com/embed/page/cmo39egjj0005c77wyex458ou?noBackground=false"
-              className="w-full rounded-sm"
-              style={{ height: "580px" }}
-              frameBorder="0"
-              title="Book a Discovery Conversation"
+          {/* Calendly Widget */}
+          <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-sm border border-navy/5 overflow-hidden">
+            <div 
+              className="calendly-inline-widget" 
+              data-url="https://calendly.com/gabriellahammer/discovery-call"
+              style={{ minWidth: "320px", height: "700px" }}
             />
           </div>
 
@@ -229,6 +217,12 @@ export default function ServicesPage() {
           </p>
         </div>
       </section>
+
+      {/* Calendly Script */}
+      <Script 
+        src="https://assets.calendly.com/assets/external/widget.js" 
+        strategy="lazyOnload"
+      />
 
       <Footer />
     </main>
