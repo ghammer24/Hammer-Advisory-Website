@@ -36,7 +36,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-2xl"
+          className="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-lg xl:max-w-xl"
         >
           {/* Above headline label */}
           <motion.p 
