@@ -14,24 +14,24 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-end sm:items-center overflow-hidden">
       {/* Background Image - brighter, more prominent face */}
       <div className="absolute inset-0">
         <Image
           src="/images/gabriella-hero-full.jpg"
           alt="Gabriella Hammer"
           fill
-          className="object-contain object-[80%_center] sm:object-cover sm:object-[80%_20%] md:object-[75%_15%] lg:object-[70%_10%] brightness-105 contrast-105"
+          className="object-cover object-[50%_25%] sm:object-[80%_20%] md:object-[75%_15%] lg:object-[70%_10%] brightness-105 contrast-105"
           priority
           sizes="100vw"
         />
-        {/* Reduced overlay - cleaner left edge for text, clean right edge (no fade) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent" />
+        {/* Overlay - stronger on mobile for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/40 sm:bg-gradient-to-r sm:from-navy/90 sm:via-navy/60 sm:to-transparent" />
         {/* Subtle bottom vignette only */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent sm:from-navy/20" />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 py-32 lg:py-40">
+      <div className="container mx-auto px-6 lg:px-12 relative z-10 pb-16 pt-[55vh] sm:py-32 lg:py-40">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
