@@ -18,10 +18,10 @@ export function HeroSection() {
       {/* Background Image - brighter, more prominent face */}
       <div className="absolute inset-0">
         <Image
-          src="/images/gabriella-hammer.jpg"
+          src="/images/gabriella-hero-full.jpg"
           alt="Gabriella Hammer"
           fill
-          className="object-cover object-[90%_25%] sm:object-[85%_22%] md:object-[80%_18%] lg:object-[75%_15%] brightness-110 contrast-105"
+          className="object-contain object-[80%_center] sm:object-cover sm:object-[80%_20%] md:object-[75%_15%] lg:object-[70%_10%] brightness-105 contrast-105"
           priority
           sizes="100vw"
         />
