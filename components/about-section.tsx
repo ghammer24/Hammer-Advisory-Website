@@ -57,7 +57,7 @@ export function AboutSection() {
               </p>
               
               <p>
-                I work with executives, leaders, and high performers who are operating at the top of their field and still feel like something is off. You are not broken. You are not failing. You have simply reached a threshold where the next level requires something different, an internal architecture that supports sustained excellence.
+                I work with professionals who are operating at the top of their field and still feel like something is off. You are not broken. You are not failing. You have simply reached a threshold where the next level requires something different, an internal architecture that supports sustained excellence.
               </p>
 
               <p>
