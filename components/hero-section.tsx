@@ -63,21 +63,10 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-serif text-xl md:text-2xl text-gold/90 tracking-tight mb-8"
+            className="font-serif text-xl md:text-2xl text-gold/90 tracking-tight mb-10"
           >
             Strategic alignment that turns success into fulfillment.
           </motion.p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-xl mb-10 space-y-1"
-          >
-            <p>You&apos;ve built significant success.</p>
-            <p>Yet something still feels off.</p>
-            <p className="text-cream font-medium">I close the internal gap.</p>
-          </motion.div>
 
           {/* CTA Button - high contrast gold with border */}
           <motion.div 
