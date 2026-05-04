@@ -17,19 +17,21 @@ export function HeroSection() {
     <section className="relative min-h-screen overflow-hidden">
       {/* Desktop Layout: Side by side */}
       <div className="hidden lg:flex min-h-screen">
-        {/* Left side - Rich gradient background with slight overlap to prevent gap */}
+        {/* Left side - Rich, visible gradient background */}
         <div 
-          className="w-[55%] flex items-center relative pr-px"
+          className="w-[55%] flex items-center relative"
           style={{
             background: `
-              radial-gradient(ellipse 80% 50% at 20% 40%, rgba(30, 41, 59, 0.8) 0%, transparent 50%),
-              radial-gradient(ellipse 60% 40% at 80% 80%, rgba(45, 55, 72, 0.6) 0%, transparent 40%),
-              linear-gradient(180deg, 
-                #0f172a 0%, 
-                #1a1f2e 25%, 
-                #151a28 50%, 
-                #1e293b 75%,
-                #0f172a 100%
+              radial-gradient(ellipse 120% 80% at 10% 20%, rgba(15, 23, 42, 1) 0%, transparent 50%),
+              radial-gradient(ellipse 100% 60% at 90% 90%, rgba(55, 50, 45, 0.4) 0%, transparent 50%),
+              linear-gradient(175deg, 
+                #0a0f1a 0%, 
+                #0f172a 15%, 
+                #1e2433 35%, 
+                #2d3340 55%, 
+                #252a35 70%,
+                #1f2937 85%,
+                #1a1f2e 100%
               )
             `
           }}
@@ -117,17 +119,20 @@ export function HeroSection() {
 
       {/* Mobile/Tablet Layout: Stacked vertically */}
       <div className="lg:hidden min-h-screen flex flex-col">
-        {/* Mobile content area with gradient */}
+        {/* Mobile content area with rich gradient */}
         <div 
           className="px-6 md:px-10 pt-28 pb-12 md:pt-32 md:pb-16 relative"
           style={{
             background: `
-              radial-gradient(ellipse 100% 60% at 30% 30%, rgba(30, 41, 59, 0.7) 0%, transparent 50%),
+              radial-gradient(ellipse 120% 80% at 20% 10%, rgba(15, 23, 42, 1) 0%, transparent 50%),
+              radial-gradient(ellipse 100% 60% at 80% 100%, rgba(55, 50, 45, 0.35) 0%, transparent 50%),
               linear-gradient(180deg, 
-                #0f172a 0%, 
-                #1a1f2e 40%, 
-                #151a28 70%,
-                #1e293b 100%
+                #0a0f1a 0%, 
+                #0f172a 20%, 
+                #1e2433 45%, 
+                #2d3340 65%,
+                #1f2937 85%,
+                #1a1f2e 100%
               )
             `
           }}
