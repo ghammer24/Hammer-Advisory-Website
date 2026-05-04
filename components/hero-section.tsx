@@ -17,49 +17,72 @@ export function HeroSection() {
     <section className="relative min-h-screen overflow-hidden">
       {/* Desktop Layout: Side by side */}
       <div className="hidden lg:flex min-h-screen">
-        {/* Left side - Dark content area */}
-        <div className="w-[55%] bg-navy flex items-center">
-          <div className="px-12 xl:px-20 py-20 max-w-2xl ml-auto mr-12">
+        {/* Left side - Rich gradient background */}
+        <div 
+          className="w-[55%] flex items-center relative"
+          style={{
+            background: `
+              radial-gradient(ellipse 80% 50% at 20% 40%, rgba(30, 41, 59, 0.8) 0%, transparent 50%),
+              radial-gradient(ellipse 60% 40% at 80% 80%, rgba(45, 55, 72, 0.6) 0%, transparent 40%),
+              linear-gradient(180deg, 
+                #0f172a 0%, 
+                #1a1f2e 25%, 
+                #151a28 50%, 
+                #1e293b 75%,
+                #0f172a 100%
+              )
+            `
+          }}
+        >
+          {/* Subtle texture overlay */}
+          <div 
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+            }}
+          />
+          
+          <div className="px-12 xl:px-20 py-20 max-w-2xl ml-auto mr-12 relative z-10">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              {/* COACH label - larger, more visible */}
+              {/* COACH label - elegant, warm gold */}
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-sm tracking-[0.3em] uppercase mb-8 font-normal"
-                style={{ color: '#c4a97d' }}
+                style={{ color: '#c9a86c' }}
               >
                 Coach
               </motion.p>
 
-              {/* Main Heading */}
+              {/* Main Heading - cream/white */}
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="font-serif text-cream tracking-tight leading-[1.15] mb-6"
-                style={{ fontSize: 'clamp(2.8rem, 3.5vw, 3.6rem)' }}
+                className="font-serif tracking-tight leading-[1.15] mb-6"
+                style={{ fontSize: 'clamp(2.8rem, 3.5vw, 3.6rem)', color: '#f5f0e8' }}
               >
                 <span className="block">You Built the Life.</span>
                 <span className="block mt-1">Why Doesn&apos;t It Feel Like Yours?</span>
               </motion.h1>
 
-              {/* Subheading */}
+              {/* Subheading - soft warm tone, lighter weight */}
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="font-light tracking-wide mb-10 leading-relaxed text-lg"
-                style={{ color: 'rgba(200, 180, 160, 0.8)' }}
+                style={{ color: 'rgba(210, 190, 170, 0.85)' }}
               >
                 Strategic alignment that turns success into fulfillment.
               </motion.p>
 
-              {/* CTA Button */}
+              {/* CTA Button - Gold/amber */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -89,15 +112,33 @@ export function HeroSection() {
             priority
             sizes="45vw"
           />
-          {/* Subtle blend into dark side */}
-          <div className="absolute inset-0 bg-gradient-to-r from-navy via-transparent to-transparent w-24" />
+          {/* Subtle blend into gradient side */}
+          <div 
+            className="absolute inset-0 w-32"
+            style={{
+              background: 'linear-gradient(to right, #0f172a 0%, rgba(15, 23, 42, 0.8) 30%, transparent 100%)'
+            }}
+          />
         </div>
       </div>
 
       {/* Mobile/Tablet Layout: Stacked vertically */}
       <div className="lg:hidden min-h-screen flex flex-col">
-        {/* Mobile content area */}
-        <div className="bg-navy px-6 md:px-10 pt-28 pb-12 md:pt-32 md:pb-16">
+        {/* Mobile content area with gradient */}
+        <div 
+          className="px-6 md:px-10 pt-28 pb-12 md:pt-32 md:pb-16 relative"
+          style={{
+            background: `
+              radial-gradient(ellipse 100% 60% at 30% 30%, rgba(30, 41, 59, 0.7) 0%, transparent 50%),
+              linear-gradient(180deg, 
+                #0f172a 0%, 
+                #1a1f2e 40%, 
+                #151a28 70%,
+                #1e293b 100%
+              )
+            `
+          }}
+        >
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -110,7 +151,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-sm tracking-[0.3em] uppercase mb-6 font-normal"
-              style={{ color: '#c4a97d' }}
+              style={{ color: '#c9a86c' }}
             >
               Coach
             </motion.p>
@@ -120,8 +161,8 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="font-serif text-cream tracking-tight leading-[1.2] mb-5"
-              style={{ fontSize: 'clamp(2rem, 7vw, 2.5rem)' }}
+              className="font-serif tracking-tight leading-[1.2] mb-5"
+              style={{ fontSize: 'clamp(2rem, 7vw, 2.5rem)', color: '#f5f0e8' }}
             >
               <span className="block">You Built the Life.</span>
               <span className="block mt-1">Why Doesn&apos;t It Feel Like Yours?</span>
@@ -133,7 +174,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               className="font-light tracking-wide mb-8 leading-relaxed"
-              style={{ fontSize: '1.1rem', color: 'rgba(200, 180, 160, 0.8)' }}
+              style={{ fontSize: '1.1rem', color: 'rgba(210, 190, 170, 0.85)' }}
             >
               Strategic alignment that turns success into fulfillment.
             </motion.p>
@@ -168,7 +209,12 @@ export function HeroSection() {
             sizes="100vw"
           />
           {/* Subtle top blend */}
-          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-navy to-transparent" />
+          <div 
+            className="absolute inset-x-0 top-0 h-20"
+            style={{
+              background: 'linear-gradient(to bottom, #1e293b 0%, transparent 100%)'
+            }}
+          />
         </div>
       </div>
 
