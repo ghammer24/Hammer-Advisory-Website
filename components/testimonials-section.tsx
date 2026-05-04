@@ -10,7 +10,7 @@ const testimonials = [
     role: "Top 5 percent Financial Advisor",
   },
   {
-    quote: "I am graduating, I have the capital, I have the vision. Gabriella is part of my team. That is not changing. Let us rip it.",
+    quote: "I am graduating, I have the capital, I have the vision. Gabriella is part of my team. That is not changing. Let's rip it.",
     role: "Founder, Pre Series A Startup",
   },
   {
