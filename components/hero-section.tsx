@@ -27,20 +27,20 @@ export function HeroSection() {
           sizes="100vw"
         />
         
-        {/* Seamless horizontal gradient overlay - dark navy fading into portrait */}
+        {/* Seamless horizontal gradient overlay - exact site navy fading into portrait */}
         <div 
           className="absolute inset-0"
           style={{
             background: `
               linear-gradient(90deg, 
-                #0a0e17 0%, 
-                #0a0e17 20%, 
-                rgba(10, 14, 23, 0.98) 30%,
-                rgba(12, 18, 28, 0.92) 40%,
-                rgba(15, 23, 35, 0.75) 50%,
-                rgba(18, 28, 42, 0.45) 60%,
-                rgba(20, 30, 45, 0.2) 70%,
-                transparent 85%
+                #0A1428 0%, 
+                #0A1428 25%, 
+                rgba(10, 20, 40, 0.97) 35%,
+                rgba(12, 24, 48, 0.88) 45%,
+                rgba(16, 30, 56, 0.65) 55%,
+                rgba(20, 36, 64, 0.35) 65%,
+                rgba(24, 40, 70, 0.15) 75%,
+                transparent 90%
               )
             `
           }}
@@ -52,10 +52,10 @@ export function HeroSection() {
           style={{
             background: `
               linear-gradient(180deg, 
-                rgba(10, 14, 23, 0.3) 0%, 
-                transparent 30%,
-                transparent 70%,
-                rgba(10, 14, 23, 0.4) 100%
+                rgba(10, 20, 40, 0.25) 0%, 
+                transparent 25%,
+                transparent 75%,
+                rgba(10, 20, 40, 0.3) 100%
               )
             `
           }}
@@ -126,16 +126,16 @@ export function HeroSection() {
 
       {/* Mobile/Tablet Layout: Stacked vertically */}
       <div className="lg:hidden min-h-screen flex flex-col">
-        {/* Mobile content area with gradient */}
+        {/* Mobile content area with gradient - using exact site navy */}
         <div 
           className="px-6 md:px-10 pt-28 pb-12 md:pt-32 md:pb-16 relative"
           style={{
             background: `
               linear-gradient(180deg, 
-                #0a0e17 0%, 
-                #0f1520 30%, 
-                #141c28 60%,
-                #1a2535 100%
+                #0A1428 0%, 
+                #0D1830 30%, 
+                #101E3A 60%,
+                #142444 100%
               )
             `
           }}
@@ -209,11 +209,11 @@ export function HeroSection() {
             priority
             sizes="100vw"
           />
-          {/* Subtle top blend into gradient */}
+          {/* Subtle top blend into gradient - matching site navy */}
           <div 
             className="absolute inset-x-0 top-0 h-24"
             style={{
-              background: 'linear-gradient(to bottom, #1a2535 0%, transparent 100%)'
+              background: 'linear-gradient(to bottom, #142444 0%, transparent 100%)'
             }}
           />
         </div>
