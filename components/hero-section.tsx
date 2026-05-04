@@ -21,7 +21,7 @@ export function HeroSection() {
           src="/images/gabriella-hero-full.jpg"
           alt="Gabriella Hammer"
           fill
-          className="object-contain object-[80%_center] sm:object-cover sm:object-[80%_20%] md:object-[75%_15%] lg:object-[70%_10%] brightness-105 contrast-105"
+          className="object-cover object-[90%_30%] sm:object-[88%_25%] md:object-[85%_20%] lg:object-[82%_15%] brightness-105 contrast-105"
           priority
           sizes="100vw"
         />
@@ -36,7 +36,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-2xl"
+          className="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-lg xl:max-w-xl"
         >
           {/* Above headline label */}
           <motion.p 
