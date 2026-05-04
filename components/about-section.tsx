@@ -28,7 +28,7 @@ export function AboutSection() {
                 src="/images/gabriella-hero.jpg"
                 alt="Gabriella Hammer, Founder of Hammer Advisory"
                 fill
-                className="object-cover object-[50%_12%]"
+                className="object-cover object-[50%_5%]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               {/* Decorative elements */}
