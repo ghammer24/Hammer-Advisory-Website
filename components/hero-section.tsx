@@ -53,10 +53,20 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-4"
           >
             You Built the Life. Why Doesn&apos;t It Feel Like Yours?
           </motion.h1>
+
+          {/* Subheading */}
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="font-serif text-xl md:text-2xl text-gold/90 tracking-tight mb-8"
+          >
+            Strategic alignment that turns success into fulfillment.
+          </motion.p>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
