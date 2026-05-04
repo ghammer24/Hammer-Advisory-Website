@@ -15,20 +15,20 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image - positioned to show full head and shoulders */}
+      {/* Background Image - brighter, more prominent face */}
       <div className="absolute inset-0">
         <Image
           src="/images/gabriella-hammer.jpg"
           alt="Gabriella Hammer"
           fill
-          className="object-cover object-[90%_25%] sm:object-[85%_22%] md:object-[80%_18%] lg:object-[75%_15%]"
+          className="object-cover object-[90%_25%] sm:object-[85%_22%] md:object-[80%_18%] lg:object-[75%_15%] brightness-110 contrast-105"
           priority
           sizes="100vw"
         />
-        {/* Refined warm overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/40 md:to-transparent" />
-        {/* Subtle warm vignette */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
+        {/* Reduced overlay - cleaner left edge for text, clean right edge (no fade) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent" />
+        {/* Subtle bottom vignette only */}
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10 py-32 lg:py-40">
@@ -38,14 +38,14 @@ export function HeroSection() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="max-w-2xl"
         >
-          {/* Logo text */}
+          {/* Above headline label */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gold text-sm tracking-[0.3em] uppercase mb-6"
           >
-            Hammer Advisory
+            Coach
           </motion.p>
 
           {/* Main Heading */}
@@ -53,33 +53,33 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-6"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-3"
           >
-            Strategic Alignment for High Achievers
+            <span className="block">You Built the Life.</span>
+            <span className="block">Why Doesn&apos;t It Feel Like Yours?</span>
           </motion.h1>
 
+          {/* Subheading */}
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-lg md:text-xl text-cream/70 tracking-tight mb-8"
+          >
+            Strategic alignment that turns success into fulfillment.
+          </motion.p>
+
+          {/* CTA Button - high contrast gold with border */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-cream/80 text-lg md:text-xl leading-relaxed max-w-xl mb-10 space-y-1"
-          >
-            <p>You&apos;ve built significant success.</p>
-            <p>Yet something still feels off.</p>
-            <p className="text-cream font-medium">We close the internal gap.</p>
-          </motion.div>
-
-          {/* CTA Button */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
             className="flex items-start"
           >
             <Button
               asChild
               size="lg"
-              className="bg-gold text-navy hover:bg-gold/90 font-medium px-10 py-6 text-base tracking-wide transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-gold/20"
+              className="bg-[#d4a853] text-[#0a1628] hover:bg-[#e0b863] font-semibold px-10 py-6 text-base tracking-wide transition-all duration-300 hover:scale-[1.02] shadow-xl shadow-black/30 border-2 border-[#e8c36a]"
             >
               <Link href="https://calendly.com/gabriellahammer/discovery-call" target="_blank" rel="noopener noreferrer">
                 Let&apos;s Talk
