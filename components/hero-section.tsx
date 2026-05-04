@@ -102,7 +102,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Right side - Portrait with more prominence */}
+        {/* Right side - Portrait with clean edge, no divider */}
         <div className="w-[45%] relative">
           <Image
             src="/images/gabriella-hammer.jpg"
@@ -112,11 +112,11 @@ export function HeroSection() {
             priority
             sizes="45vw"
           />
-          {/* Subtle blend into gradient side */}
+          {/* Seamless soft blend - very subtle, no visible line */}
           <div 
-            className="absolute inset-0 w-32"
+            className="absolute inset-y-0 left-0 w-24 pointer-events-none"
             style={{
-              background: 'linear-gradient(to right, #0f172a 0%, rgba(15, 23, 42, 0.8) 30%, transparent 100%)'
+              background: 'linear-gradient(to right, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.2) 40%, transparent 100%)'
             }}
           />
         </div>
