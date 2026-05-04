@@ -43,28 +43,30 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gold text-sm tracking-[0.3em] uppercase mb-6"
+            className="text-gold text-xs tracking-[0.35em] uppercase mb-8 font-light"
           >
             Coach
           </motion.p>
 
-          {/* Main Heading */}
+          {/* Main Heading - balanced sizing: 2.5rem mobile, 3.8rem desktop */}
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-3"
+            className="font-serif text-cream tracking-tight leading-[1.15] mb-5"
+            style={{ fontSize: 'clamp(2.5rem, 5vw, 3.8rem)' }}
           >
             <span className="block">You Built the Life.</span>
             <span className="block">Why Doesn&apos;t It Feel Like Yours?</span>
           </motion.h1>
 
-          {/* Subheading */}
+          {/* Subheading - 1.1rem mobile, 1.25rem desktop, lighter weight */}
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-cream/70 tracking-tight mb-8"
+            className="text-cream/60 font-light tracking-wide mb-10"
+            style={{ fontSize: 'clamp(1.1rem, 1.5vw, 1.25rem)' }}
           >
             Strategic alignment that turns success into fulfillment.
           </motion.p>
