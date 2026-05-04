@@ -53,7 +53,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-4"
+            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-3"
           >
             <span className="block">You Built the Life.</span>
             <span className="block">Why Doesn&apos;t It Feel Like Yours?</span>
@@ -64,7 +64,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-serif text-xl md:text-2xl text-gold/90 tracking-tight mb-10"
+            className="text-lg md:text-xl text-cream/70 tracking-tight mb-8"
           >
             Strategic alignment that turns success into fulfillment.
           </motion.p>
@@ -73,7 +73,7 @@ export function HeroSection() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="flex items-start"
           >
             <Button
