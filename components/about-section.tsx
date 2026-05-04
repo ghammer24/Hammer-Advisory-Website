@@ -25,7 +25,7 @@ export function AboutSection() {
           >
             <div className="aspect-[4/5] bg-navy/5 rounded-sm overflow-hidden relative">
               <Image
-                src="/images/gabriella-about.jpg"
+                src="/images/gabriella-hero.jpg"
                 alt="Gabriella Hammer, Founder of Hammer Advisory"
                 fill
                 className="object-cover object-[50%_20%]"
