@@ -17,9 +17,9 @@ export function HeroSection() {
     <section className="relative min-h-screen overflow-hidden">
       {/* Desktop Layout: Side by side */}
       <div className="hidden lg:flex min-h-screen">
-        {/* Left side - Rich gradient background */}
+        {/* Left side - Rich gradient background with slight overlap to prevent gap */}
         <div 
-          className="w-[55%] flex items-center relative"
+          className="w-[55%] flex items-center relative pr-px"
           style={{
             background: `
               radial-gradient(ellipse 80% 50% at 20% 40%, rgba(30, 41, 59, 0.8) 0%, transparent 50%),
@@ -102,8 +102,8 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Right side - Portrait with clean edge, no divider */}
-        <div className="w-[45%] relative">
+        {/* Right side - Portrait with completely clean edge, no overlay */}
+        <div className="w-[45%] relative -ml-px">
           <Image
             src="/images/gabriella-hammer.jpg"
             alt="Gabriella Hammer"
@@ -111,13 +111,6 @@ export function HeroSection() {
             className="object-cover object-[center_15%] brightness-105 contrast-105"
             priority
             sizes="45vw"
-          />
-          {/* Seamless soft blend - very subtle, no visible line */}
-          <div 
-            className="absolute inset-y-0 left-0 w-24 pointer-events-none"
-            style={{
-              background: 'linear-gradient(to right, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.2) 40%, transparent 100%)'
-            }}
           />
         </div>
       </div>
