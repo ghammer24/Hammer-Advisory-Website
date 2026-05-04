@@ -15,42 +15,61 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
-      {/* Desktop Layout: Side by side */}
-      <div className="hidden lg:flex min-h-screen">
-        {/* Left side - Rich, visible gradient background */}
+      {/* Desktop Layout: Full-width background image with gradient overlay */}
+      <div className="hidden lg:block min-h-screen relative">
+        {/* Full background image */}
+        <Image
+          src="/images/gabriella-hammer.jpg"
+          alt="Gabriella Hammer"
+          fill
+          className="object-cover object-[70%_15%] brightness-105 contrast-105"
+          priority
+          sizes="100vw"
+        />
+        
+        {/* Seamless horizontal gradient overlay - dark navy fading into portrait */}
         <div 
-          className="w-[55%] flex items-center relative"
+          className="absolute inset-0"
           style={{
             background: `
-              radial-gradient(ellipse 120% 80% at 10% 20%, rgba(15, 23, 42, 1) 0%, transparent 50%),
-              radial-gradient(ellipse 100% 60% at 90% 90%, rgba(55, 50, 45, 0.4) 0%, transparent 50%),
-              linear-gradient(175deg, 
-                #0a0f1a 0%, 
-                #0f172a 15%, 
-                #1e2433 35%, 
-                #2d3340 55%, 
-                #252a35 70%,
-                #1f2937 85%,
-                #1a1f2e 100%
+              linear-gradient(90deg, 
+                #0a0e17 0%, 
+                #0a0e17 20%, 
+                rgba(10, 14, 23, 0.98) 30%,
+                rgba(12, 18, 28, 0.92) 40%,
+                rgba(15, 23, 35, 0.75) 50%,
+                rgba(18, 28, 42, 0.45) 60%,
+                rgba(20, 30, 45, 0.2) 70%,
+                transparent 85%
               )
             `
           }}
-        >
-          {/* Subtle texture overlay */}
-          <div 
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-            }}
-          />
-          
-          <div className="px-12 xl:px-20 py-20 max-w-2xl ml-auto mr-12 relative z-10">
+        />
+        
+        {/* Subtle vertical gradient for depth */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: `
+              linear-gradient(180deg, 
+                rgba(10, 14, 23, 0.3) 0%, 
+                transparent 30%,
+                transparent 70%,
+                rgba(10, 14, 23, 0.4) 100%
+              )
+            `
+          }}
+        />
+
+        {/* Content positioned on left */}
+        <div className="absolute inset-0 flex items-center">
+          <div className="px-12 xl:px-20 py-20 max-w-2xl ml-8 xl:ml-16 relative z-10">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
-              {/* COACH label - elegant, warm gold */}
+              {/* COACH label */}
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -61,7 +80,7 @@ export function HeroSection() {
                 Coach
               </motion.p>
 
-              {/* Main Heading - cream/white */}
+              {/* Main Heading */}
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -73,18 +92,18 @@ export function HeroSection() {
                 <span className="block mt-1">Why Doesn&apos;t It Feel Like Yours?</span>
               </motion.h1>
 
-              {/* Subheading - soft warm tone, lighter weight */}
+              {/* Subheading */}
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="font-light tracking-wide mb-10 leading-relaxed text-lg"
-                style={{ color: 'rgba(210, 190, 170, 0.85)' }}
+                style={{ color: 'rgba(210, 190, 170, 0.9)' }}
               >
                 Strategic alignment that turns success into fulfillment.
               </motion.p>
 
-              {/* CTA Button - Gold/amber */}
+              {/* CTA Button */}
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -103,36 +122,20 @@ export function HeroSection() {
             </motion.div>
           </div>
         </div>
-
-        {/* Right side - Portrait with completely clean edge, no overlay */}
-        <div className="w-[45%] relative -ml-px">
-          <Image
-            src="/images/gabriella-hammer.jpg"
-            alt="Gabriella Hammer"
-            fill
-            className="object-cover object-[center_15%] brightness-105 contrast-105"
-            priority
-            sizes="45vw"
-          />
-        </div>
       </div>
 
       {/* Mobile/Tablet Layout: Stacked vertically */}
       <div className="lg:hidden min-h-screen flex flex-col">
-        {/* Mobile content area with rich gradient */}
+        {/* Mobile content area with gradient */}
         <div 
           className="px-6 md:px-10 pt-28 pb-12 md:pt-32 md:pb-16 relative"
           style={{
             background: `
-              radial-gradient(ellipse 120% 80% at 20% 10%, rgba(15, 23, 42, 1) 0%, transparent 50%),
-              radial-gradient(ellipse 100% 60% at 80% 100%, rgba(55, 50, 45, 0.35) 0%, transparent 50%),
               linear-gradient(180deg, 
-                #0a0f1a 0%, 
-                #0f172a 20%, 
-                #1e2433 45%, 
-                #2d3340 65%,
-                #1f2937 85%,
-                #1a1f2e 100%
+                #0a0e17 0%, 
+                #0f1520 30%, 
+                #141c28 60%,
+                #1a2535 100%
               )
             `
           }}
@@ -154,7 +157,7 @@ export function HeroSection() {
               Coach
             </motion.p>
 
-            {/* Main Heading - comfortable mobile size */}
+            {/* Main Heading */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -172,7 +175,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               className="font-light tracking-wide mb-8 leading-relaxed"
-              style={{ fontSize: '1.1rem', color: 'rgba(210, 190, 170, 0.85)' }}
+              style={{ fontSize: '1.1rem', color: 'rgba(210, 190, 170, 0.9)' }}
             >
               Strategic alignment that turns success into fulfillment.
             </motion.p>
@@ -196,7 +199,7 @@ export function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Mobile portrait - full width, no overlap */}
+        {/* Mobile portrait with top blend */}
         <div className="relative flex-1 min-h-[50vh]">
           <Image
             src="/images/gabriella-hammer.jpg"
@@ -206,17 +209,17 @@ export function HeroSection() {
             priority
             sizes="100vw"
           />
-          {/* Subtle top blend */}
+          {/* Subtle top blend into gradient */}
           <div 
-            className="absolute inset-x-0 top-0 h-20"
+            className="absolute inset-x-0 top-0 h-24"
             style={{
-              background: 'linear-gradient(to bottom, #1e293b 0%, transparent 100%)'
+              background: 'linear-gradient(to bottom, #1a2535 0%, transparent 100%)'
             }}
           />
         </div>
       </div>
 
-      {/* Scroll indicator - desktop only */}
+      {/* Scroll indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
