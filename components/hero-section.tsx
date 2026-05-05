@@ -55,8 +55,8 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-3"
           >
-            <span className="block">You Built the Life.</span>
-            <span className="block">Why Doesn&apos;t It Feel Like Yours?</span>
+            <span className="block">Master Your State.</span>
+            <span className="block">Master Your Life.</span>
           </motion.h1>
 
           {/* Subheading */}
