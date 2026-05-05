@@ -43,9 +43,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gold text-sm tracking-[0.25em] uppercase mb-6"
+            className="text-gold text-sm tracking-[0.3em] uppercase mb-6"
           >
-            Hammer Advisory
+            Coach
           </motion.p>
 
           {/* Main Heading */}
