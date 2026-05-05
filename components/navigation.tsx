@@ -65,7 +65,7 @@ export function Navigation() {
               variant={isScrolled ? "navy" : "cream"}
             />
             <span className={cn(
-              "font-serif text-lg tracking-wide transition-colors duration-300 hidden sm:inline",
+              "font-serif text-base sm:text-lg tracking-wide transition-colors duration-300",
               isScrolled ? "text-navy" : "text-cream"
             )}>
               Hammer Advisory
