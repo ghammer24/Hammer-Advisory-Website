@@ -53,7 +53,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-4xl md:text-5xl lg:text-6xl text-cream tracking-tight leading-tight mb-3"
+            className="font-serif text-3xl md:text-4xl lg:text-5xl text-cream tracking-tight leading-tight mb-3"
           >
             <span className="block">Master Your State.</span>
             <span className="block">Master Your Life.</span>
