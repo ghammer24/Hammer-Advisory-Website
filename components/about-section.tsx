@@ -57,15 +57,15 @@ export function AboutSection() {
               </p>
               
               <p>
-                I help people regulate their state, choose which thoughts to follow, and act from the ones that serve them. Simple as that. When your nervous system is steady and your mind is clear, you naturally tell yourself a better story. And live it.
+                With a background as a PMH-NP and years in critical care, I bring a precise understanding of the human system: what true regulation looks like, what dysregulation costs, and how to build real internal consistency.
               </p>
 
               <p>
-                With a background as a Psychiatric Mental Health Nurse Practitioner and critical care nursing experience, I bring a precise understanding of the human system: what true regulation looks like, what dysregulation costs, and how to build the internal consistency.
+                I help people regulate their state, choose which thoughts to follow, and act from the ones that serve them. Simple as that. When your nervous system is steady and your mind is clear, you naturally tell yourself a better story and live it.
               </p>
               
               <p>
-                At Hammer Advisory, this is strategic alignment at the intersection of human performance and identity. We help you train the mind to direct feelings rather than follow them, take full ownership of outcomes, and close internal gaps through disciplined practice. The result is real transformation - an identity rebuilt from clear, empowered decisions.
+                At Hammer Advisory, this is the work. The result is transformation: you consciously choosing who you want to be. In every moment. No matter what.
               </p>
             </div>
           </motion.div>
