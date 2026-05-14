@@ -54,7 +54,7 @@ export function PhilosophySection() {
 
             <div className="space-y-4 text-cream/70 text-sm leading-relaxed">
               <p>
-                Your internal state shapes every decision, every interaction, and every opportunity you can see. Most high achievers already know what to do. The real constraint is almost always internal.
+                Your internal state shapes every decision, every interaction, and every opportunity you can see.
               </p>
 
               <p>
