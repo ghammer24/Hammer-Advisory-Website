@@ -32,9 +32,6 @@ export function Footer() {
               <Link href="/services" className="text-cream/60 hover:text-gold transition-colors text-sm">
                 Services
               </Link>
-              <Link href="/insights" className="text-cream/60 hover:text-gold transition-colors text-sm">
-                Insights
-              </Link>
               <Link href="https://calendly.com/gabriellahammer/discovery-call" target="_blank" rel="noopener noreferrer" className="text-cream/60 hover:text-gold transition-colors text-sm">
                 Contact
               </Link>
