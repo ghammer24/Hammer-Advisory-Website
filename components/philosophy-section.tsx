@@ -18,7 +18,7 @@ const principles = [
   {
     icon: Zap,
     title: "Lasting Transformation",
-    description: "Through repeated cycles of regulation, decisive action, ownership, and reflection, change compounds. You build a more consistent identity where high performance becomes instinctual rather than effortful, no longer dependent on motivation or perfect conditions.",
+    description: "Through repeated cycles of regulation, decisive action, ownership, and reflection, change compounds and identity shifts.",
   },
 ]
 
