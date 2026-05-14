@@ -17,7 +17,6 @@ const navLinks = [
   },
   { href: "/services", label: "Services" },
   { href: "#testimonials", label: "Client Experiences" },
-  { href: "/insights", label: "Insights" },
 ]
 
 export function Navigation() {
