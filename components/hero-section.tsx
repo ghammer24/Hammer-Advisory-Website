@@ -53,21 +53,11 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-3xl md:text-4xl lg:text-5xl text-cream tracking-tight leading-tight mb-3"
+            className="font-serif text-3xl md:text-4xl lg:text-5xl text-cream tracking-tight leading-tight mb-8"
           >
             <span className="block">Master Your State.</span>
             <span className="block">Master Your Life.</span>
           </motion.h1>
-
-          {/* Subheading */}
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="text-lg md:text-xl text-cream/70 tracking-tight mb-8"
-          >
-            Strategic alignment that turns success into fulfillment.
-          </motion.p>
 
           {/* CTA Button - high contrast gold with border */}
           <motion.div 

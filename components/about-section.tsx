@@ -57,15 +57,15 @@ export function AboutSection() {
               </p>
               
               <p>
-                I work with professionals who are operating at the top of their field and still feel like something is off. You are not broken. You are not failing. You have simply reached a threshold where the next level requires something different, an internal architecture that supports sustained excellence.
+                With a background as a PMH-NP and years in critical care, I bring a precise understanding of the human system: what true regulation looks like, what dysregulation costs, and how to build real internal consistency.
               </p>
 
               <p>
-                With a background as a PMH-NP and critical care experience, I bring a precise understanding of the human system: what true regulation looks like, what dysregulation costs, and how to build the internal consistency that most advisors overlook.
+                I help people regulate their state, choose which thoughts to follow, and act from the ones that serve them. Simple as that. When your nervous system is steady and your mind is clear, you naturally tell yourself a better story and live it.
               </p>
               
               <p>
-                At Hammer Advisory, this is strategic alignment at the intersection of human performance and identity. We help you train the mind to direct feelings rather than follow them, take full ownership of outcomes, and close internal gaps through disciplined practice. The result is performance that becomes more automatic and instinctual over time.
+                At Hammer Advisory, this is the work. The result is transformation: you consciously choosing who you want to be. In every moment. No matter what.
               </p>
             </div>
           </motion.div>
