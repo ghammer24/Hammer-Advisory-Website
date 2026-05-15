@@ -14,100 +14,94 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Smooth gradient background - dark navy left to warm beige right */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(90deg, 
-            #0A1428 0%, 
-            #0A1428 25%, 
-            #0f1d32 35%,
-            #1a2a42 45%,
-            #3d4a5c 55%,
-            #8a8578 65%,
-            #c4b8a8 75%,
-            #e8dfd0 85%,
-            #f5efe6 100%
-          )`
-        }}
-      />
+    <section className="relative min-h-screen flex overflow-hidden">
+      {/* Left side - solid deep navy background (65%) */}
+      <div className="absolute inset-y-0 left-0 w-[65%] bg-[#0A1428]" />
       
-      {/* Portrait image - softly blended on right side */}
-      <div className="absolute right-0 top-0 bottom-0 w-[55%] md:w-[50%] lg:w-[45%]">
-        <Image
-          src="/images/gabriella-signature.jpg"
-          alt="Gabriella Hammer"
-          fill
-          className="object-cover object-[center_20%] brightness-105 contrast-105"
-          priority
-          sizes="55vw"
-        />
-        {/* Soft left edge blend into gradient */}
-        <div 
-          className="absolute inset-y-0 left-0 w-48 md:w-64"
-          style={{
-            background: `linear-gradient(90deg, 
-              #c4b8a8 0%,
-              rgba(196, 184, 168, 0.95) 20%,
-              rgba(196, 184, 168, 0.7) 40%,
-              rgba(196, 184, 168, 0.4) 60%,
-              rgba(196, 184, 168, 0.15) 80%,
-              transparent 100%
-            )`
-          }}
-        />
+      {/* Right side - warm beige background (35%) */}
+      <div className="absolute inset-y-0 right-0 w-[35%] bg-[#f5efe6]" />
+      
+      {/* Portrait container - positioned to overlap the transition */}
+      <div className="absolute right-0 top-0 bottom-0 w-[50%] lg:w-[45%] flex items-center justify-center">
+        <div className="relative h-full w-full">
+          <Image
+            src="/images/gabriella-signature.jpg"
+            alt="Gabriella Hammer"
+            fill
+            className="object-cover object-[center_15%]"
+            priority
+            sizes="50vw"
+          />
+          {/* Soft feathered left edge blend into navy */}
+          <div 
+            className="absolute inset-y-0 left-0 w-40 md:w-56 lg:w-72"
+            style={{
+              background: `linear-gradient(90deg, 
+                #0A1428 0%,
+                rgba(10, 20, 40, 0.98) 15%,
+                rgba(10, 20, 40, 0.9) 30%,
+                rgba(10, 20, 40, 0.7) 45%,
+                rgba(10, 20, 40, 0.45) 60%,
+                rgba(10, 20, 40, 0.2) 75%,
+                rgba(10, 20, 40, 0.05) 90%,
+                transparent 100%
+              )`
+            }}
+          />
+        </div>
       </div>
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 py-32 lg:py-40">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-md sm:max-w-lg md:max-w-xl lg:max-w-lg xl:max-w-xl"
-        >
-          {/* Above headline label */}
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gold text-sm tracking-[0.3em] uppercase mb-6"
-          >
-            Coach
-          </motion.p>
-
-          {/* Main Heading */}
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-serif text-3xl md:text-4xl lg:text-5xl text-cream tracking-tight leading-tight mb-8"
-          >
-            <span className="block">Master Your State.</span>
-            <span className="block">Master Your Life.</span>
-          </motion.h1>
-
-          {/* CTA Button - high contrast gold with border */}
+      {/* Content container */}
+      <div className="relative z-10 w-full flex items-center min-h-screen">
+        <div className="container mx-auto px-6 lg:px-12">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex items-start"
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="max-w-lg lg:max-w-xl"
           >
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#d4a853] text-[#0a1628] hover:bg-[#e0b863] font-semibold px-10 py-6 text-base tracking-wide transition-all duration-300 hover:scale-[1.02] shadow-xl shadow-black/30 border-2 border-[#e8c36a]"
+            {/* COACH label */}
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-[#c9a55c] text-xs tracking-[0.35em] uppercase mb-8 font-medium"
             >
-              <Link href="https://calendly.com/gabriellahammer/discovery-call" target="_blank" rel="noopener noreferrer">
-                Let&apos;s Talk
-              </Link>
-            </Button>
+              Coach
+            </motion.p>
+
+            {/* Main Heading */}
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-white tracking-tight leading-[1.15] mb-10"
+            >
+              <span className="block">Master Your State.</span>
+              <span className="block">Master Your Life.</span>
+            </motion.h1>
+
+            {/* CTA Button */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#c9a55c] text-[#0A1428] hover:bg-[#d4b06a] font-semibold px-12 py-7 text-base tracking-wide transition-all duration-300 hover:scale-[1.02] shadow-lg"
+              >
+                <Link href="https://calendly.com/gabriellahammer/discovery-call" target="_blank" rel="noopener noreferrer">
+                  Let&apos;s Talk
+                </Link>
+              </Button>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
-      {/* Minimal elegant scroll indicator */}
+      {/* Subtle scroll indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -117,7 +111,7 @@ export function HeroSection() {
         <motion.div 
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-[1px] h-10 bg-gradient-to-b from-cream/0 via-cream/40 to-cream/60"
+          className="w-[1px] h-10 bg-gradient-to-b from-white/0 via-white/40 to-white/60"
         />
       </motion.div>
     </section>
