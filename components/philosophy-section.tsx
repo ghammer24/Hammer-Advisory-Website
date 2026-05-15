@@ -8,17 +8,17 @@ const principles = [
   {
     icon: Heart,
     title: "State Regulation",
-    description: "Every decision is downstream of your internal state. We train the mind to remain regulated even when emotions, fatigue, or pressure arise so you can show up with steadier presence and clearer thinking, especially when it matters most.",
+    description: "Every decision flows from your internal state. We train you to stay regulated under pressure, so you can show up calmer, clearer, and more present when it matters most.",
   },
   {
     icon: Target,
     title: "Recursive Self Awareness",
-    description: "From a regulated state, you act, receive real world feedback, and reflect with full ownership and zero external blame. This recursive process reveals patterns and blind spots in real time and accelerates gap closure.",
+    description: "Act. Get real feedback. Reflect with full ownership and no blame. Repeat. This cycle quickly reveals blind spots and accelerates real growth.",
   },
   {
     icon: Zap,
     title: "Lasting Transformation",
-    description: "Through repeated cycles of regulation, decisive action, ownership, and reflection, change compounds and identity shifts.",
+    description: "Through repeated cycles of regulation, action, ownership, and reflection, real change compounds and your identity shifts.",
   },
 ]
 
