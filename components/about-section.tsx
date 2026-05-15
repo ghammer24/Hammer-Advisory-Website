@@ -48,7 +48,7 @@ export function AboutSection() {
             </p>
             
             <h2 className="font-serif text-2xl lg:text-3xl text-navy mb-6 leading-tight text-balance">
-              Trusted Advisor & Founder
+              Who I Am
             </h2>
 
             <div className="space-y-5 text-navy/70 text-sm lg:text-base leading-relaxed">

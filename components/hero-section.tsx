@@ -30,18 +30,8 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="max-w-lg lg:max-w-xl"
+            className="max-w-2xl mx-auto text-center"
           >
-            {/* COACH label */}
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[#c9a55c] text-xs tracking-[0.35em] uppercase mb-8 font-medium"
-            >
-              Coach
-            </motion.p>
-
             {/* Main Heading */}
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
