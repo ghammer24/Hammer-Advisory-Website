@@ -15,50 +15,37 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex overflow-hidden">
-      {/* Full background gradient - navy to beige transition */}
+      {/* Portrait as full-width background */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/gabriella-signature.jpg"
+          alt="Gabriella Hammer"
+          fill
+          className="object-cover object-[70%_20%]"
+          priority
+          sizes="100vw"
+        />
+      </div>
+      
+      {/* Single seamless gradient overlay - navy fading to transparent */}
       <div 
         className="absolute inset-0"
         style={{
           background: `linear-gradient(90deg, 
             #0A1428 0%,
-            #0A1428 40%,
-            #1a2a3d 50%,
-            #3d4a55 58%,
-            #8a8578 65%,
-            #c4bba8 72%,
-            #e8e0d4 80%,
-            #f5efe6 88%,
-            #f5efe6 100%
+            #0A1428 30%,
+            rgba(10, 20, 40, 0.97) 38%,
+            rgba(10, 20, 40, 0.9) 45%,
+            rgba(10, 20, 40, 0.75) 52%,
+            rgba(10, 20, 40, 0.55) 58%,
+            rgba(10, 20, 40, 0.35) 64%,
+            rgba(10, 20, 40, 0.18) 70%,
+            rgba(10, 20, 40, 0.08) 76%,
+            rgba(10, 20, 40, 0.02) 82%,
+            transparent 90%
           )`
         }}
       />
-      
-      {/* Portrait container - positioned on right */}
-      <div className="absolute right-0 top-0 bottom-0 w-[55%] lg:w-[50%] flex items-center justify-center">
-        <div className="relative h-full w-full">
-          <Image
-            src="/images/gabriella-signature.jpg"
-            alt="Gabriella Hammer"
-            fill
-            className="object-cover object-[center_20%]"
-            priority
-            sizes="55vw"
-          />
-          {/* Soft feathered left edge blend - seamless fade into gradient */}
-          <div 
-            className="absolute inset-y-0 left-0 w-56 md:w-72 lg:w-96"
-            style={{
-              background: `linear-gradient(90deg, 
-                rgba(58, 68, 78, 0.98) 0%,
-                rgba(90, 95, 92, 0.85) 25%,
-                rgba(140, 135, 125, 0.6) 50%,
-                rgba(180, 172, 160, 0.3) 75%,
-                transparent 100%
-              )`
-            }}
-          />
-        </div>
-      </div>
 
       {/* Content container */}
       <div className="relative z-10 w-full flex items-center min-h-screen">
