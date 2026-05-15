@@ -9,15 +9,12 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12 pb-12 border-b border-cream/10">
           {/* Logo */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3">
               <HourglassIcon className="w-10 h-12" variant="gold" />
               <span className="font-serif text-xl text-cream tracking-wide">
                 Hammer Advisory
               </span>
             </div>
-            <p className="text-cream/50 text-sm">
-              Strategic Alignment & Trusted Advisor
-            </p>
           </div>
 
           {/* Navigation & Social */}
