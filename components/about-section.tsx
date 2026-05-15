@@ -47,9 +47,13 @@ export function AboutSection() {
               Who I Am
             </p>
             
-            <h2 className="font-serif text-2xl lg:text-3xl text-navy mb-6 leading-tight text-balance">
-              Who I Am
+            <h2 className="font-serif text-2xl lg:text-3xl text-navy mb-2 leading-tight text-balance">
+              Gabriella Hammer
             </h2>
+            
+            <p className="text-gold text-sm tracking-[0.15em] uppercase mb-6">
+              Founder & Lead Coach
+            </p>
 
             <div className="space-y-5 text-navy/70 text-sm lg:text-base leading-relaxed">
               <p>
