@@ -22,28 +22,26 @@ export function HeroSection() {
       <div className="absolute inset-y-0 right-0 w-[35%] bg-[#f5efe6]" />
       
       {/* Portrait container - positioned to overlap the transition */}
-      <div className="absolute right-0 top-0 bottom-0 w-[50%] lg:w-[45%] flex items-center justify-center">
+      <div className="absolute right-0 top-0 bottom-0 w-[55%] lg:w-[50%] flex items-center justify-center">
         <div className="relative h-full w-full">
           <Image
             src="/images/gabriella-signature.jpg"
             alt="Gabriella Hammer"
             fill
-            className="object-cover object-[center_15%]"
+            className="object-cover object-[center_20%]"
             priority
-            sizes="50vw"
+            sizes="55vw"
           />
-          {/* Soft feathered left edge blend into navy */}
+          {/* Soft feathered left edge blend into navy - more gradual */}
           <div 
-            className="absolute inset-y-0 left-0 w-40 md:w-56 lg:w-72"
+            className="absolute inset-y-0 left-0 w-48 md:w-64 lg:w-80"
             style={{
               background: `linear-gradient(90deg, 
                 #0A1428 0%,
-                rgba(10, 20, 40, 0.98) 15%,
-                rgba(10, 20, 40, 0.9) 30%,
-                rgba(10, 20, 40, 0.7) 45%,
+                rgba(10, 20, 40, 0.95) 20%,
+                rgba(10, 20, 40, 0.75) 40%,
                 rgba(10, 20, 40, 0.45) 60%,
-                rgba(10, 20, 40, 0.2) 75%,
-                rgba(10, 20, 40, 0.05) 90%,
+                rgba(10, 20, 40, 0.15) 80%,
                 transparent 100%
               )`
             }}
