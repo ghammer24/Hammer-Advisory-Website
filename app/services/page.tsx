@@ -22,12 +22,9 @@ export default function ServicesPage() {
             <p className="text-gold text-sm tracking-[0.2em] uppercase mb-4">
               Services
             </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-cream tracking-tight leading-tight mb-6">
+            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl text-cream tracking-tight leading-tight">
               How We Work Together
             </h1>
-            <p className="text-cream/70 text-lg leading-relaxed max-w-2xl mx-auto">
-              Strategic alignment is not a quick fix. It is a deliberate process of closing the internal gaps that separate where you are from what you are truly capable of.
-            </p>
           </div>
         </div>
       </section>
@@ -90,7 +87,7 @@ export default function ServicesPage() {
             {/* Divider */}
             <div className="border-t border-navy/10" />
 
-            {/* Strategic Alignment Partnership */}
+            {/* 1:1 Advisory */}
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center">
@@ -100,42 +97,29 @@ export default function ServicesPage() {
                   Ongoing Advisory
                 </span>
               </div>
-              <h2 className="font-serif text-2xl md:text-3xl text-navy tracking-tight mb-4">
-                Strategic Alignment Partnership
+              <h2 className="font-serif text-2xl md:text-3xl text-navy tracking-tight mb-8">
+                1:1 Advisory
               </h2>
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
-                <div>
-                  <p className="text-navy/70 leading-relaxed mb-6">
-                    High-touch, 1:1 advisory for executives and leaders who have achieved significant success but sense an internal gap between where they are and what they are truly capable of.
-                  </p>
-                  <p className="text-navy/70 leading-relaxed mb-6">
-                    We help you create deep congruence between your internal state and your external pace so your leadership, decisions, and presence feel fully aligned with the level of success you have built.
-                  </p>
-                  <p className="text-navy/60 text-sm italic mb-8">
-                    This is selective, application-only work.
-                  </p>
-                </div>
-                <div className="bg-navy/5 rounded-lg p-8">
-                  <h3 className="font-serif text-lg text-navy mb-4">What This Includes</h3>
-                  <ul className="space-y-3 text-navy/70 text-sm">
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                      <span>1:1 advisory sessions</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                      <span>Regulation and performance mastery</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                      <span>Recursive self-awareness development</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
-                      <span>Real-time support between sessions</span>
-                    </li>
-                  </ul>
-                </div>
+              <div className="bg-navy/5 rounded-lg p-8">
+                <h3 className="font-serif text-lg text-navy mb-4">What This Includes</h3>
+                <ul className="space-y-3 text-navy/70 text-sm">
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
+                    <span>1:1 advisory sessions</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
+                    <span>Regulation and performance mastery</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
+                    <span>Recursive self-awareness development</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2 shrink-0" />
+                    <span>Real-time support between sessions</span>
+                  </li>
+                </ul>
               </div>
               <div className="mt-8">
                 <Link 
