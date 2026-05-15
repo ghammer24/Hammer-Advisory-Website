@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
@@ -14,36 +13,13 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex overflow-hidden">
-      {/* Portrait as full-width background - zoomed out to show upper body */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/gabriella-signature.jpg"
-          alt="Gabriella Hammer"
-          fill
-          className="object-cover object-[75%_45%] md:object-[70%_40%] lg:object-[68%_35%]"
-          priority
-          sizes="100vw"
-        />
-      </div>
-      
-      {/* Single seamless gradient overlay - navy fading to transparent */}
+    <section className="relative min-h-screen flex overflow-hidden bg-[#0A1428]">
+      {/* Subtle gradient for depth */}
       <div 
         className="absolute inset-0"
         style={{
-          background: `linear-gradient(90deg, 
-            #0A1428 0%,
-            #0A1428 30%,
-            rgba(10, 20, 40, 0.97) 38%,
-            rgba(10, 20, 40, 0.9) 45%,
-            rgba(10, 20, 40, 0.75) 52%,
-            rgba(10, 20, 40, 0.55) 58%,
-            rgba(10, 20, 40, 0.35) 64%,
-            rgba(10, 20, 40, 0.18) 70%,
-            rgba(10, 20, 40, 0.08) 76%,
-            rgba(10, 20, 40, 0.02) 82%,
-            transparent 90%
-          )`
+          background: `radial-gradient(ellipse at 30% 50%, rgba(20, 35, 60, 0.8) 0%, transparent 60%),
+                       radial-gradient(ellipse at 80% 80%, rgba(201, 165, 92, 0.05) 0%, transparent 40%)`
         }}
       />
 
