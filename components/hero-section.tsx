@@ -15,13 +15,25 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex overflow-hidden">
-      {/* Left side - solid deep navy background (65%) */}
-      <div className="absolute inset-y-0 left-0 w-[65%] bg-[#0A1428]" />
+      {/* Full background gradient - navy to beige transition */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: `linear-gradient(90deg, 
+            #0A1428 0%,
+            #0A1428 40%,
+            #1a2a3d 50%,
+            #3d4a55 58%,
+            #8a8578 65%,
+            #c4bba8 72%,
+            #e8e0d4 80%,
+            #f5efe6 88%,
+            #f5efe6 100%
+          )`
+        }}
+      />
       
-      {/* Right side - warm beige background (35%) */}
-      <div className="absolute inset-y-0 right-0 w-[35%] bg-[#f5efe6]" />
-      
-      {/* Portrait container - positioned to overlap the transition */}
+      {/* Portrait container - positioned on right */}
       <div className="absolute right-0 top-0 bottom-0 w-[55%] lg:w-[50%] flex items-center justify-center">
         <div className="relative h-full w-full">
           <Image
@@ -32,16 +44,15 @@ export function HeroSection() {
             priority
             sizes="55vw"
           />
-          {/* Soft feathered left edge blend into navy - more gradual */}
+          {/* Soft feathered left edge blend - seamless fade into gradient */}
           <div 
-            className="absolute inset-y-0 left-0 w-48 md:w-64 lg:w-80"
+            className="absolute inset-y-0 left-0 w-56 md:w-72 lg:w-96"
             style={{
               background: `linear-gradient(90deg, 
-                #0A1428 0%,
-                rgba(10, 20, 40, 0.95) 20%,
-                rgba(10, 20, 40, 0.75) 40%,
-                rgba(10, 20, 40, 0.45) 60%,
-                rgba(10, 20, 40, 0.15) 80%,
+                rgba(58, 68, 78, 0.98) 0%,
+                rgba(90, 95, 92, 0.85) 25%,
+                rgba(140, 135, 125, 0.6) 50%,
+                rgba(180, 172, 160, 0.3) 75%,
                 transparent 100%
               )`
             }}
