@@ -15,13 +15,13 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex overflow-hidden">
-      {/* Portrait as full-width background */}
+      {/* Portrait as full-width background - zoomed out to show upper body */}
       <div className="absolute inset-0">
         <Image
           src="/images/gabriella-signature.jpg"
           alt="Gabriella Hammer"
           fill
-          className="object-cover object-[70%_20%]"
+          className="object-cover object-[75%_45%] md:object-[70%_40%] lg:object-[68%_35%]"
           priority
           sizes="100vw"
         />
