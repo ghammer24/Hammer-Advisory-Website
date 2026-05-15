@@ -21,20 +21,20 @@ export function HeroSection() {
         style={{
           background: `linear-gradient(90deg, 
             #0A1428 0%,
-            #0A1428 40%,
-            #1a2a3d 50%,
-            #3d4a55 58%,
-            #8a8578 65%,
-            #c4bba8 72%,
-            #e8e0d4 80%,
-            #f5efe6 88%,
+            #0A1428 35%,
+            #0f1e30 45%,
+            #1a2a3d 52%,
+            #3d4a55 60%,
+            #8a8578 68%,
+            #c4bba8 76%,
+            #e8e0d4 85%,
             #f5efe6 100%
           )`
         }}
       />
       
-      {/* Portrait container - positioned on right */}
-      <div className="absolute right-0 top-0 bottom-0 w-[55%] lg:w-[50%] flex items-center justify-center">
+      {/* Portrait container - wider to start blending earlier */}
+      <div className="absolute right-0 top-0 bottom-0 w-[65%] lg:w-[60%] flex items-center justify-center">
         <div className="relative h-full w-full">
           <Image
             src="/images/gabriella-signature.jpg"
@@ -42,17 +42,21 @@ export function HeroSection() {
             fill
             className="object-cover object-[center_20%]"
             priority
-            sizes="55vw"
+            sizes="65vw"
           />
-          {/* Soft feathered left edge blend - seamless fade into gradient */}
+          {/* Much wider, softer feathered left edge blend */}
           <div 
-            className="absolute inset-y-0 left-0 w-56 md:w-72 lg:w-96"
+            className="absolute inset-y-0 left-0 w-[50%] md:w-[45%] lg:w-[40%]"
             style={{
               background: `linear-gradient(90deg, 
-                rgba(58, 68, 78, 0.98) 0%,
-                rgba(90, 95, 92, 0.85) 25%,
-                rgba(140, 135, 125, 0.6) 50%,
-                rgba(180, 172, 160, 0.3) 75%,
+                #0A1428 0%,
+                rgba(10, 20, 40, 0.98) 10%,
+                rgba(15, 30, 48, 0.92) 20%,
+                rgba(26, 42, 61, 0.82) 30%,
+                rgba(61, 74, 85, 0.65) 45%,
+                rgba(138, 133, 120, 0.4) 60%,
+                rgba(196, 187, 168, 0.2) 75%,
+                rgba(232, 224, 212, 0.08) 88%,
                 transparent 100%
               )`
             }}
