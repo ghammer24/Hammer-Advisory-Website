@@ -14,17 +14,17 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Hammer Advisory | Strategic Alignment Consultant for Executives & Leaders in Pasadena',
-  description: 'Hammer Advisory provides strategic alignment for high-performing executives and leaders in Pasadena and Los Angeles. Gabriella Hammer helps you address internal gaps that limit sustained performance and create the conditions for your next level of leadership.',
-  keywords: ['strategic alignment', 'executive coaching', 'leadership consultant', 'trusted advisor', 'executive advisor', 'Pasadena', 'Los Angeles', 'high-performing executives'],
+  title: 'Hammer Advisory | Master Your State. Master Your Life.',
+  description: 'Hammer Advisory helps you regulate your state, choose which thoughts to follow, and act from the ones that serve you. The result is transformation.',
+  keywords: ['state regulation', 'executive coaching', 'leadership consultant', 'trusted advisor', 'executive advisor', 'Pasadena', 'Los Angeles', 'transformation'],
   authors: [{ name: 'Gabriella Hammer' }],
   icons: {
     icon: '/icon.svg',
     apple: '/icon.svg',
   },
   openGraph: {
-    title: 'Hammer Advisory | Strategic Alignment Consultant for Executives & Leaders',
-    description: 'Hammer Advisory provides strategic alignment for high-performing executives and leaders in Pasadena and Los Angeles.',
+    title: 'Hammer Advisory | Master Your State. Master Your Life.',
+    description: 'Hammer Advisory helps you regulate your state, choose which thoughts to follow, and act from the ones that serve you.',
     type: 'website',
   },
 }
@@ -50,7 +50,7 @@ export default function RootLayout({
               "name": "Hammer Advisory",
               "alternateName": "Not A Moment Sooner LLC",
               "url": "https://gabriellahammer.com",
-              "description": "Strategic alignment consulting for high achievers and executives in Pasadena and Los Angeles.",
+              "description": "Hammer Advisory helps you regulate your state, choose which thoughts to follow, and act from the ones that serve you.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Pasadena",
