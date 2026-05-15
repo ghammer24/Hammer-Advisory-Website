@@ -41,71 +41,39 @@ export function PhilosophySection() {
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left column - Main content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <h2 className="font-serif text-2xl lg:text-3xl text-cream mb-6 leading-tight text-balance">
-              The Philosophy.
-            </h2>
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-serif text-2xl lg:text-3xl text-cream leading-tight">
+            The Philosophy.
+          </h2>
+        </motion.div>
 
-            <div className="space-y-4 text-cream/70 text-sm leading-relaxed">
-              <p>
-                Your internal state shapes every decision, every interaction, and every opportunity you can see.
+        {/* Three Pillars */}
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          {principles.map((principle, index) => (
+            <motion.div
+              key={principle.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+              className="text-center group"
+            >
+              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cream/5 border border-cream/10 flex items-center justify-center group-hover:border-gold/50 transition-colors">
+                <principle.icon className="w-6 h-6 text-gold" />
+              </div>
+              <h3 className="font-serif text-xl text-cream mb-3">
+                {principle.title}
+              </h3>
+              <p className="text-cream/60 text-sm leading-relaxed">
+                {principle.description}
               </p>
-
-              <p>
-                We close those internal gaps through three integrated pillars.
-              </p>
-              
-              <p className="text-cream/90 font-medium">
-                The goal is simple: develop the internal foundation so you can self guide with fewer gaps, even in challenging moments.
-              </p>
-            </div>
-
-            {/* Quote */}
-            <blockquote className="mt-8 pl-4 border-l-2 border-gold">
-              <p className="text-cream/90 text-sm italic font-serif">
-                &ldquo;Everything in perfect timing… not a moment sooner.&rdquo;
-              </p>
-              <cite className="text-gold/80 text-xs mt-2 block not-italic">
-                Gabriella Hammer
-              </cite>
-            </blockquote>
-          </motion.div>
-
-          {/* Right column - Principles */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="space-y-8"
-          >
-            {principles.map((principle, index) => (
-              <motion.div
-                key={principle.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="flex gap-6 group"
-              >
-                <div className="w-12 h-12 shrink-0 rounded-full bg-cream/5 border border-cream/10 flex items-center justify-center group-hover:border-gold/50 transition-colors">
-                  <principle.icon className="w-5 h-5 text-gold" />
-                </div>
-                <div>
-                  <h3 className="font-serif text-lg text-cream mb-1">
-                    {principle.title}
-                  </h3>
-                  <p className="text-cream/60 text-sm leading-relaxed">
-                    {principle.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
