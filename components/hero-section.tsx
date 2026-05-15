@@ -21,7 +21,7 @@ export function HeroSection() {
           src="/images/gabriella-signature.jpg"
           alt="Gabriella Hammer"
           fill
-          className="object-cover object-[100%_30%] sm:object-[100%_25%] md:object-[100%_20%] lg:object-[100%_15%] brightness-105 contrast-105"
+          className="object-cover object-[85%_50%] sm:object-[90%_45%] md:object-[92%_40%] lg:object-[95%_35%] brightness-105 contrast-105"
           priority
           sizes="100vw"
         />
