@@ -15,20 +15,48 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image - brighter, more prominent face */}
-      <div className="absolute inset-0">
+      {/* Smooth gradient background - dark navy left to warm beige right */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: `linear-gradient(90deg, 
+            #0A1428 0%, 
+            #0A1428 25%, 
+            #0f1d32 35%,
+            #1a2a42 45%,
+            #3d4a5c 55%,
+            #8a8578 65%,
+            #c4b8a8 75%,
+            #e8dfd0 85%,
+            #f5efe6 100%
+          )`
+        }}
+      />
+      
+      {/* Portrait image - softly blended on right side */}
+      <div className="absolute right-0 top-0 bottom-0 w-[55%] md:w-[50%] lg:w-[45%]">
         <Image
           src="/images/gabriella-signature.jpg"
           alt="Gabriella Hammer"
           fill
-          className="object-contain object-right brightness-105 contrast-105 scale-[0.65] sm:scale-[0.7] md:scale-[0.75] lg:scale-[0.8] origin-right"
+          className="object-cover object-[center_20%] brightness-105 contrast-105"
           priority
-          sizes="100vw"
+          sizes="55vw"
         />
-        {/* Reduced overlay - cleaner left edge for text, clean right edge (no fade) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/60 to-transparent" />
-        {/* Subtle bottom vignette only */}
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
+        {/* Soft left edge blend into gradient */}
+        <div 
+          className="absolute inset-y-0 left-0 w-48 md:w-64"
+          style={{
+            background: `linear-gradient(90deg, 
+              #c4b8a8 0%,
+              rgba(196, 184, 168, 0.95) 20%,
+              rgba(196, 184, 168, 0.7) 40%,
+              rgba(196, 184, 168, 0.4) 60%,
+              rgba(196, 184, 168, 0.15) 80%,
+              transparent 100%
+            )`
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10 py-32 lg:py-40">
