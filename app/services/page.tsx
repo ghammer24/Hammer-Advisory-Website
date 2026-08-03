@@ -49,7 +49,7 @@ export default function ServicesPage() {
                   Discovery Call
                 </h2>
                 <p className="text-navy/70 leading-relaxed mb-6">
-                  A focused 30-minute conversation to explore whether we are a good fit. This is not a sales call. It is a genuine exchange to understand where you are, what you are working toward, and whether this work makes sense for your situation.
+                  A focused 30-minute conversation to explore whether we are a good fit. A genuine exchange to understand where you are, what you are working toward, and whether this work makes sense for your situation.
                 </p>
                 <ul className="space-y-3 text-navy/60 text-sm mb-8">
                   <li className="flex items-start gap-3">
