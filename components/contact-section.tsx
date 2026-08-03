@@ -22,19 +22,15 @@ export function ContactSection() {
             className="max-w-xl mx-auto text-center mb-8"
           >
             <p className="text-gold text-sm tracking-[0.2em] uppercase mb-3">
-              Begin Your Journey
+              Let&apos;s Connect
             </p>
             
             <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl text-navy mb-3 leading-tight text-balance">
-              Let&apos;s Find Out If This Is the Right Fit
+              Start a Conversation
             </h2>
 
             <p className="text-navy/70 text-sm leading-relaxed">
-              If something on this page named something you haven&apos;t been able to name yourself, that&apos;s worth a conversation. Book a discovery call.
-            </p>
-            
-            <p className="text-navy/60 text-xs mt-3 italic">
-              This work is by application only.
+              If something here resonated with you, I&apos;d love to hear from you. Reach out and we can talk it through together.
             </p>
           </motion.div>
 
